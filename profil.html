@@ -18,8 +18,56 @@
             </div>
         </header>
 
-        <div>
+        <div id="profile-main">
+            <div class="form-infos">
+                <form method="POST" action="" class="">
+                    <p class="title-two">
+                        <br/>
+                        <label for="last-name">Nom</label>
+                        <br/>
+                        <input type="text">
+                        <br/>
+                        <label for="first-name">Prénom</label>
+                        <br/>
+                        <input type="text" name="first-name" id="first-name">
+                        <br/>
+                        <label for="mail">E-mail</label>
+                        <br/>
+                        <input type="email" name="mail"/>
+                        <br/>
+                        <label for="mail">Confirmez votre e-mail</label>
+                        <br/>
+                        <input type="mail-confirm" name="mail-confirm"/>
+                        <br/>
+                        <label for="password">Mot de passe </label>
+                        <br/>
+                        <input type="password" name="password" id="password">
+                        <br/>
+                        <label for="password-confirm">Confirmez le mot de passe </label>
+                        <br/>
+                        <input type="password" name="password-confirm" id="password-confirm">
+                        <br/>
+                        <input type="submit" value="Envoyer" class="form-button-send">
+                    </p>
+                </form>
+            </div>
 
+            <div class="form-picture">
+                <form method="POST" action="" class="">
+                    <span>Photo de profil</span>
+                    <p>La photo de profil doit être au format .jpeg et être inférieur à 1mo</p>
+                    <p class="title-two">
+                        <img src="" alt="votre photo de profil">
+                        <br/>
+                        <label for="id">Photo</label>
+                        <br/>
+                        <input type="number">
+                        <br/>
+                        <input type="submit" value="Envoyer" class="form-button-send">
+                    </p>
+                </form>
+
+            </div>
         </div>
 
         <footer id="home-footer">
