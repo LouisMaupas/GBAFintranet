@@ -17,36 +17,58 @@
                 </p>
             </div>
         </header>
-
-        <!-- si connecté alors : -->
+        <!-- si connecté -->
         <?php header('Location: home.php'); ?>
-        <!-- Sinon  PREMIERE CONNEXION ? -->
-        <div id="form-subscribe">
-            <p>Formulaire de première connexion</p>
-            <form method="POST" action="">
+        <!-- SINON-->
+        <div id="index-main">
+            <div class="forms form-login">
+                <span class="title-one">Se connecter</span>
+                <form method="POST" action="" class="form">
+                    <p class="title-two">
+                        <label for="id">Identifiant</label>
+                        <br/>
+                        <input type="number">
+                        <br/>
+                        <label for="password">Mot de passe </label>
+                        <br/>
+                        <input type="password" name="password" id="password">
+                        <br/>
+                        <input type="submit" value="Envoyer" class="form-button-send">
+                    </p>
+                </form>                
+            </div>
+            <div class="forms form-subscribe">
+                <span class="title-one">Première connexion</span>
                 <p>
-                    <label for="last-name">Nom</label> : <input type="text" name="last-name" id="last-name" /><br />
-                    <label for="first-name">Prénom</label> : <input type="text" name="first-name" id="first-name" /><br />
-                    <label for="password">Mot de passe </label> :  <input type="password" name="password" id="password" /><br />
-                    <label for="password-confirm">Confirmation du mot de passe </label> :  <input type="password" name="password-confirm" id="password-confirm" /><br />
-                    <input type="submit" value="Envoyer" />
+                    Si c'est votre première connexion veuillez <span class="text-red">renseigner les informations</span> vous concernants.
                 </p>
-            </form>
-        </div>
-                <!-- Sinon SE CONNECTER -->
-        <div id="form-login">
-            <p>Veuillez renseigner vos informations personnelles</p>
-            <form method="POST" action="">
-                <p>
-                    <label for="last-name">Nom</label> : <input type="text" name="last-name" id="last-name" /><br />
-                    <label for="first-name">Prénom</label> : <input type="text" name="first-name" id="first-name" /><br />
-                    <label for="password">Mot de passe </label> :  <input type="password" name="password" id="password" /><br />
-                    <input type="submit" value="Envoyer" />
-                </p>
-            </form>
-        </div>
-       
-
+                <form method="POST" action="" class="form">
+                    <p class="title-two">
+                        <label for="id">Identifiant</label>
+                        <br/>
+                        <input type="number">
+                        <br/>
+                        <label for="last-name">Nom</label>
+                        <br/>
+                        <input type="text">
+                        <br/>
+                        <label for="first-name">Prénom</label>
+                        <br/>
+                        <input type="text" name="first-name" id="first-name">
+                        <br/>
+                        <label for="password">Mot de passe </label>
+                        <br/>
+                        <input type="password" name="password" id="password">
+                        <br/>
+                        <label for="password-two">Confirmez le mot de passe </label>
+                        <br/>
+                        <input type="password" name="password-two" id="password-two">
+                        <br/>
+                        <input type="submit" value="Envoyer" class="form-button-send">
+                    </p>
+                </form>
+            </div>
+        </div>    
         <footer id="home-footer">
             <p>
                 | Mentions légales | Contact |

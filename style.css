@@ -2,6 +2,14 @@ h3 {
     font-weight:normal;
 }
 
+.text-red {
+    color: red;
+}
+
+.title-one {
+    font-size: 2em;
+}
+
 
 #container {
     display: flex;
@@ -129,16 +137,25 @@ h3 {
 }
 
 
-/* UNIQUEMENT INSCRIPTION - CONNEXION*/
+/* UNIQUEMENT INDEX*/
 
-#form-subscribe {
-    border-style: solid;
-    margin: 10em;
-    display: inline-block;
+#index-main {
+    display: flex;
+    justify-content: space-between;
+    border-style: ridge;
+    margin: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-#form-login {
-    border-style: solid;
-    margin: 10em;
-    display: inline-block;
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-weight: bold;
+}
+
+.form-login {
+    margin-top: 4em;
 }
