@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>PAGE DE CONNEXION</title>
+</head>
+<body>
+    <div id="container">
+        <header id="header">
+            <div class="header-logo"><p><img src="./ressources/logo-gbaf-reduit.png" alt="Logo de GBAF"/></p></div>
+            <div id="user-name">
+                <p>
+                    <img src="./ressources/logo-profil.png" alt="logo accès au profil"/> 
+                    <span id="name-and-firstname">Nom & Prénom</span>
+                </p>
+            </div>
+        </header>
+
+        <!-- si connecté alors : -->
+        <?php header('Location: home.php'); ?>
+        <!-- Sinon  PREMIERE CONNEXION ? -->
+        <div id="form-subscribe">
+            <p>Formulaire de première connexion</p>
+            <form method="POST" action="">
+                <p>
+                    <label for="last-name">Nom</label> : <input type="text" name="last-name" id="last-name" /><br />
+                    <label for="first-name">Prénom</label> : <input type="text" name="first-name" id="first-name" /><br />
+                    <label for="password">Mot de passe </label> :  <input type="password" name="password" id="password" /><br />
+                    <label for="password-confirm">Confirmation du mot de passe </label> :  <input type="password" name="password-confirm" id="password-confirm" /><br />
+                    <input type="submit" value="Envoyer" />
+                </p>
+            </form>
+        </div>
+                <!-- Sinon SE CONNECTER -->
+        <div id="form-login">
+            <p>Veuillez renseigner vos informations personnelles</p>
+            <form method="POST" action="">
+                <p>
+                    <label for="last-name">Nom</label> : <input type="text" name="last-name" id="last-name" /><br />
+                    <label for="first-name">Prénom</label> : <input type="text" name="first-name" id="first-name" /><br />
+                    <label for="password">Mot de passe </label> :  <input type="password" name="password" id="password" /><br />
+                    <input type="submit" value="Envoyer" />
+                </p>
+            </form>
+        </div>
+       
+
+        <footer id="home-footer">
+            <p>
+                | Mentions légales | Contact |
+            </p>
+        </footer>
+    </div>    
+</body>
+</html>
