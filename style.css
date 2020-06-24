@@ -156,6 +156,23 @@ h3 {
     font-weight: bold;
 }
 
+.form-button-send {
+    background-color: grey;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.3em 0.5em;
+    box-shadow: 0 2px black;
+    outline: none;
+}
+
+.form-button-send:active {
+    box-shadow: 0 0px black;
+    transform: translateY(2px) ;
+} 
+
+
 .form-login {
     margin-top: 4em;
 }
