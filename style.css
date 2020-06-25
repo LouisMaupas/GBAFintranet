@@ -38,7 +38,49 @@ h3 {
     padding: 0.5em;
 }
 
-/* UNIQUEMENT page HOME */
+
+/* UNIQUEMENT INDEX*/
+
+#index-main {
+    display: flex;
+    justify-content: space-between;
+    border-style: ridge;
+    margin: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-weight: bold;
+}
+
+.form-button-send {
+    background-color: grey;
+    font-weight: bold;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.3em 0.5em;
+    box-shadow: 0 2px black;
+    outline: none;
+}
+
+.form-button-send:active {
+    box-shadow: 0 0px black;
+    transform: translateY(2px) ;
+} 
+
+
+.form-login {
+    margin-top: 4em;
+}
+
+/* UNIQUEMENT HOME */
 
 #user-name {
     display: flex;
@@ -80,7 +122,7 @@ h3 {
     height: 50%;
 }
 
-/* UNIQUEMENT PAGE ACTOR */ 
+/* UNIQUEMENT ACTOR */ 
 
 #actor-bot {
     display: flex;
@@ -136,10 +178,9 @@ h3 {
 
 }
 
+/*UNIQUEMENT PROFIL */
 
-/* UNIQUEMENT INDEX*/
-
-#index-main {
+#profile-main {
     display: flex;
     justify-content: space-between;
     border-style: ridge;
@@ -148,31 +189,6 @@ h3 {
     padding-bottom: 3em;
 }
 
-
-.forms {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    font-weight: bold;
-}
-
-.form-button-send {
-    background-color: grey;
-    border: none;
-    border-radius: 1em;
-    cursor: pointer;
-    margin-top: 1em;
-    padding: 0.3em 0.5em;
-    box-shadow: 0 2px black;
-    outline: none;
-}
-
-.form-button-send:active {
-    box-shadow: 0 0px black;
-    transform: translateY(2px) ;
-} 
-
-
-.form-login {
-    margin-top: 4em;
+.form-picture {
+    margin-right: 1em;
 }

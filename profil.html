@@ -19,8 +19,9 @@
         </header>
 
         <div id="profile-main">
-            <div class="form-infos">
+            <div class="forms form-infos">
                 <form method="POST" action="" class="">
+                    <span class="title-one">Mes informations</span>
                     <p class="title-two">
                         <br/>
                         <label for="last-name">Nom</label>
@@ -52,18 +53,18 @@
                 </form>
             </div>
 
-            <div class="form-picture">
+            <div class="forms form-picture">
                 <form method="POST" action="" class="">
-                    <span>Photo de profil</span>
-                    <p>La photo de profil doit être au format .jpeg et être inférieur à 1mo</p>
+                    <span class="title-one">Photo de profil</span>
+                    <p>La photo de profil doit être <br/> au format .jpeg et inférieur à 1mo</p>
                     <p class="title-two">
-                        <img src="" alt="votre photo de profil">
+                        <img src="./ressources/photo-profil.png" alt="votre photo de profil">
                         <br/>
-                        <label for="id">Photo</label>
+                        <label for="id">sélectionnez votre photo de profil</label>
                         <br/>
-                        <input type="number">
+                        <input type="file" name="photo-profil">
                         <br/>
-                        <input type="submit" value="Envoyer" class="form-button-send">
+                        <input type="submit" value="Envoyer la photo" class="form-button-send">
                     </p>
                 </form>
 
