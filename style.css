@@ -2,6 +2,11 @@ h3 {
     font-weight:normal;
 }
 
+a:link
+{
+text-decoration:none;
+}
+
 .text-red {
     color: red;
 }
@@ -10,6 +15,11 @@ h3 {
     font-size: 2em;
 }
 
+
+#user-name {
+    display: flex;
+    flex-direction: row;
+}
 
 #container {
     display: flex;
@@ -81,11 +91,6 @@ h3 {
 }
 
 /* UNIQUEMENT HOME */
-
-#user-name {
-    display: flex;
-
-}
 
 #home-list-actors{
     display: flex;

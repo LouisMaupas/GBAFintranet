@@ -9,12 +9,26 @@
 <body>
     <div id="container">
         <header id="header">
-            <div class="header-logo"><p><img src="./ressources/logo-gbaf-reduit.png" alt="Logo de GBAF"/></p></div>
+            <a href="./home.html">
+                <div class="header-logo">
+                    <p>
+                        <img src="./ressources/logo-gbaf-reduit.png" alt="Logo de GBAF"/>
+                        Accueil
+                    </p>
+                </div>
+            </a>
             <div id="user-name">
-                <p>
-                    <img src="./ressources/logo-profil.png" alt="logo accès au profil"/> 
-                    <span id="name-and-firstname">Nom & Prénom</span>
-                </p>
+                <a href="./profil.html">
+                    <p>
+                        <div id="user-name-logo">
+                            <img src="./ressources/logo-profil.png" alt="logo accès au profil"/> 
+                        </div>
+                        <div id="user-name-text">  
+                            Mon profil : 
+                            <span id="name-and-firstname">Nom & Prénom</span>
+                        </div>
+                    </p>
+                </a>
             </div>
         </header>
 
@@ -26,7 +40,7 @@
                         <br/>
                         <label for="last-name">Nom</label>
                         <br/>
-                        <input type="text">
+                        <input type="text" name="last-name">
                         <br/>
                         <label for="first-name">Prénom</label>
                         <br/>
@@ -48,6 +62,14 @@
                         <br/>
                         <input type="password" name="password-confirm" id="password-confirm">
                         <br/>
+                        <label for="question-secret">Question secrète</label>
+                        <br/>
+                        <input type="text" name="question-secret">
+                        <br/>
+                        <label for="answer-secret">Réponse secrète</label>
+                        <br/>
+                        <input type="text" name="answaer-secret">
+                        <br/>
                         <input type="submit" value="Envoyer" class="form-button-send">
                     </p>
                 </form>
@@ -60,8 +82,8 @@
                     <p class="title-two">
                         <img src="./ressources/photo-profil.png" alt="votre photo de profil">
                         <br/>
-                        <label for="id">sélectionnez votre photo de profil</label>
-                        <br/>
+                        <label for="id">Sélectionnez votre photo de profil</label>
+                        <br/><br/>
                         <input type="file" name="photo-profil">
                         <br/>
                         <input type="submit" value="Envoyer la photo" class="form-button-send">
