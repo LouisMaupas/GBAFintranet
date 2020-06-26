@@ -1,0 +1,205 @@
+h2, h3 {
+    font-weight:normal;
+}
+
+
+a:link
+{
+text-decoration:none;
+}
+
+.text-red {
+    color: red;
+}
+
+.title-one {
+    font-size: 2em;
+}
+
+
+#user-name {
+    display: flex;
+    flex-direction: row;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid;
+}
+
+.header-logo {
+    display: flex;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+
+/* UNIQUEMENT INDEX*/
+
+#index-main {
+    display: flex;
+    justify-content: space-between;
+    border-style: ridge;
+    margin: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-weight: bold;
+}
+
+.form-button-send {
+    background-color: grey;
+    font-weight: bold;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    padding: 0.3em 0.5em;
+    box-shadow: 0 2px black;
+    outline: none;
+}
+
+.form-button-send:active {
+    box-shadow: 0 0px black;
+    transform: translateY(2px) ;
+} 
+
+
+.form-login {
+    margin-top: 4em;
+}
+
+/* UNIQUEMENT HOME */
+
+#home-presentation-text {
+    font-size: 1.17em;
+}
+
+
+#home-list-actors{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+}
+
+.home-actor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    margin: 1em;
+}
+
+.home-actor-logo-plus-text {
+    display: flex;
+
+}
+
+.home-actor-logo {
+    margin: 1em;
+}
+
+.home-actor-text {
+    margin-bottom: 1em;
+}
+
+.home-actor-button {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 1em;
+    margin-right: 2%;
+    height: 50%;
+}
+
+/* UNIQUEMENT ACTOR */ 
+
+#actor-bot {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+}
+
+#actor-bot-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+#comments-counter {
+    display: flex;
+    margin-left: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#like-programs {
+    display: flex;
+    margin-right: 1em;
+}
+
+#add-comment-button {
+    display: flex;
+    height: 80%;
+    margin-top: 0.5em;
+}
+
+#like-or-dislike {
+    display: flex;
+    border-style: solid;
+    padding: 1em;
+    margin-left: 1em;
+}
+
+#number-of-likes {
+    margin-right: 0.5em;
+}
+
+
+#actor-bot-coms {
+    display: flex;
+    flex-direction: column;
+}
+
+.com {
+    display: flex;
+    border-style: ridge;
+    margin: 1em;
+
+}
+
+/*UNIQUEMENT PROFIL */
+
+#profile-main {
+    display: flex;
+    justify-content: space-between;
+    border-style: ridge;
+    margin: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.form-picture {
+    margin-right: 1em;
+}
