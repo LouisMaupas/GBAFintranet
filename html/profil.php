@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="container">
-        <?php require 'header.php'; ?>
+        <?php require 'header.html'; ?>
         <div id="profile-main">
             <div class="forms form-infos">
                 <form method="POST" action="" class="">

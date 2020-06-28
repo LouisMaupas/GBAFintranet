@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="container">
-        <header></header>
+    <?php require 'header.html'; ?>
         <div id="actor-top">
             <div>
                 <p>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="container">
-        <?php require 'header.php'; ?>
+        <?php require 'header.html'; ?>
         <!-- MAIN 1/2-->
         <div id="home-presentation">
             <div>

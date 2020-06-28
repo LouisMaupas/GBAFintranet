@@ -7,8 +7,8 @@
     <title>connexion</title>
 </head>
 <body>
-    <header></header>
     <div id="container">
+    <?php require './html/header.html'; ?>
         <div id="index-main">
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>
@@ -27,8 +27,8 @@
                     </p>                    
                 </form>                
             </div>
-        </div>    
+        </div>  
+        <?php require './html/footer.php'; ?>  
     </div>    
-    <footer></footer>
 </body>
 </html>
