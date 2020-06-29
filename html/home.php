@@ -60,9 +60,7 @@
                             <a href="https://www.formationsco.com/">formationsco.com</a>
                         </div>   
                     </div>
-                    <a href="./actor.html">
                         <input class="home-actor-button button" type="button" value="lire la suite">
-                    </a>
                 </div>
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">

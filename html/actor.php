@@ -34,8 +34,8 @@
                     <button id="add-comment-button" class="button">Nouveau <br/> commentaire</button>
                     <div id="like-or-dislike">
                         <span id="number-of-likes"> 0 </span>
-                        <input class="button-like" type="button" src="" name="like" value="like">
-                        <input class="button-dislike" type="button" src="" name="like" value="dislike">
+                        <input class="button-like" type="button" name="like" value="like">
+                        <input class="button-dislike" type="button" name="like" value="dislike">
 
                     </div>
                 </div>

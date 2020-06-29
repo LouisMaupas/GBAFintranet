@@ -199,6 +199,21 @@ text-decoration:none;
     padding-bottom: 3em;
 }
 
+.form-activities {
+    display: flex;
+    flex-direction: column;
+}
+
+#form-activites-title {
+    display: flex;
+}
+
+#form-activites-content {
+    display: flex;
+}
+
 .form-picture {
     margin-right: 1em;
 }
+
+
