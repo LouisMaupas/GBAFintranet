@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 </head>
 <body>
     <div id="container">
-    <?php require 'header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
         <div id="actor-top">
             <div>
                 <p>
@@ -57,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <?php require 'footer.php'; ?>
+        <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>
 </body>
 </html>

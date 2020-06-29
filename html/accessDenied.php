@@ -1,3 +1,5 @@
+<?php session_start(); ?> 
+<!-- s'il est connecté rediriger vers home --> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +11,11 @@
 </head>
 <body>
     <div id="container">
-        <?php require './html/header.html'; ?>
+        <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
         <div class="forms">
             Accès refusé
         </div>
-        <?php require './html/footer.php'; ?>
+        <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>
 </body>
 </html>

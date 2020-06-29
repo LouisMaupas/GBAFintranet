@@ -1,6 +1,7 @@
+<?php session_start(); ?>
+<!-- si ses infos sont déjà en bdd rediriger vers home --> 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
 </head>
 <body>
     <div id="container">
-        <?php require './html/header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
         <div class="forms form-subscribe">
             <span class="title-one">Première connexion</span>
             <p>
@@ -41,7 +42,7 @@
                 </p>
             </form>
         </div>
-        <?php require './html/footer.php'; ?>
+        <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,11 @@
 </head>
 <body>
     <div id="container">
-    <?php require './html/header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
         <div id="index-main">
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>
-                <form method="POST" action="transition.php" class="form">
+                <form method="POST" action="./php/transition.php" class="form">
                     <p class="title-two">
                         <label for="id">Identifiant</label>
                         <br/>
@@ -28,7 +29,7 @@
                 </form>                
             </div>
         </div>  
-        <?php require './html/footer.php'; ?>  
+        <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>    
 </body>
 </html>

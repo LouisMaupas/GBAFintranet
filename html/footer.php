@@ -1,5 +1,5 @@
-        <footer id="home-footer">
-            <p>
-                | Mentions légales | Contact |
-            </p>
-        </footer>
+<footer id="home-footer">
+    <p>
+        | Mentions légales | Contact |
+    </p>
+</footer>
