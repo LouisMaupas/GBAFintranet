@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="container">
-    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
+    <?php require 'header.html'; ?>
         <div id="actor-top">
             <div>
                 <p>
