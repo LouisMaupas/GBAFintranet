@@ -13,7 +13,7 @@
         <div id="index-main">
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>
-                <form method="POST" action="php/transition.php" class="form">
+                <form method="POST" action="../php/transition.php" class="form">
                     <p class="title-two">
                         <label for="id">Identifiant</label>
                         <br/>
