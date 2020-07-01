@@ -1,5 +1,5 @@
 <?php session_start(); 
-echo 'Session : ' . $_SESSION['username'] . 'voila';
+echo 'Session : ' . $_SESSION['username'];
 ?>
 <!-- si ses infos sont déjà en bdd rediriger vers home --> 
 <!DOCTYPE html>

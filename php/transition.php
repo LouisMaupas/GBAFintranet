@@ -28,7 +28,7 @@ $isPasswordCorrect = password_verify($motDePasse, $resultat['password']);
 
 
 //Voyons si l'user a deja un profil COMPLET enregistré dans la BDD, pour ça on vérifie si question secrete associé à l'user posté est pas vide
-$ilaUneQuestionSecreteAssocieAiduserDansBDD = 0;
+$verifyQuestionNull = $resultat['question'];
 
 
 if (!$resultat)
@@ -39,7 +39,7 @@ else
 {
     if($isPasswordCorrect)
     {
-        if($ilaUneQuestionSecreteAssocieAiduserDansBDD == 0) {
+        if($verifyQuestionNull == null) {
             session_start();
             $_SESSION['id_user'] = $resultat['id_user'];
             $_SESSION['username'] = $username;
