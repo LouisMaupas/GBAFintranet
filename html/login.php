@@ -21,11 +21,11 @@ echo 'Session : ' . $_SESSION['username'];
                     <p class="title-two">
                         <label for="username">Identifiant (3 premieres lettres prénom + 3 noms)</label>
                         <br/>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" required>
                         <br/>
                         <label for="password-login">Mot de passe </label>
                         <br/>
-                        <input type="password" name="password-login" id="password-login">
+                        <input type="password" name="password-login" id="password-login" required>
                         <br/>
                         <input type="checkbox" name="stay-connected" id="stay-connected" /> <label for="stay-connected">Rester connecté</label><br /> 
                         <input type="submit" value="Envoyer" class="form-button-send">

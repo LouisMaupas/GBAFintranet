@@ -1,7 +1,8 @@
 <?php session_start(); 
 echo 'Session : ' . $_SESSION['username'];
+// si ses infos sont déjà en bdd rediriger vers home 
 ?>
-<!-- si ses infos sont déjà en bdd rediriger vers home --> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
