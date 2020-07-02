@@ -48,6 +48,12 @@ text-decoration:none;
     padding: 0.5em;
 }
 
+.button-read {
+    border-style: ridge;
+    color:#3399ff; 
+    background-color: brown; 
+}
+
 
 /* UNIQUEMENT INDEX*/
 

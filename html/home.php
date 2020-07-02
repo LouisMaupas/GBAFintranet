@@ -78,6 +78,9 @@ echo 'Session : ' . $_SESSION['username'];
                     </div>
                     <input class="home-actor-button button" type="button" value="lire la suite">
                 </div>
+
+
+
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-dsa-france.png" alt="logo DSAFrance"/>
@@ -89,8 +92,16 @@ echo 'Session : ' . $_SESSION['username'];
                             <a href="http://www.dsafrance.fr/">DSAFrance.fr</a>
                         </div>   
                     </div>
-                    <input class="home-actor-button button" type="button" value="lire la suite">
+                    <div class="button home-actor-button ">
+                    <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                        Lire la suite
+                    </a>
+                    </div>
                 </div>
+
+
+
+
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-cde.png" alt="logo CDE"/>
