@@ -42,6 +42,30 @@ echo 'Session : ' . $_SESSION['username'];
                     </div>
                 </div>
             </div>
+
+            <?php
+            // Connexion à la BDD
+            try
+            {
+                $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
+            }
+            catch (Exception $e)
+            {
+                    die('Erreur lors de la connexion à la base de données');
+            }
+            // Récupération des derniers messages dans la BDD
+            $reponse = $bdd->query('SELECT id_user, date_add, post FROM post ORDER BY date_add DESC LIMIT 0, 2') or die(print_r($bdd->errorInfo()));
+
+            // Affichage message 
+            while ($donnees = $reponse->fetch())
+            {
+                echo '<p><strong>' . htmlspecialchars($donnees['id_user']) . '</strong> : ' . htmlspecialchars($donnees['date_add']) . htmlspecialchars($donnees['post']) . '</p>';
+            }
+
+            $reponse->closeCursor();
+            ?>
+
+
             <div id="actor-bot-coms">
                 <div class="com">
                     Prénom<br/>
