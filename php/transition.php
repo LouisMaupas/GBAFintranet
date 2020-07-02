@@ -29,31 +29,33 @@ $isPasswordCorrect = password_verify($motDePasse, $resultat['password']);
 
 //Voyons si l'user a deja un profil COMPLET enregistré dans la BDD, pour ça on vérifie si question secrete associé à l'user posté est pas vide
 $verifyQuestionNull = $resultat['question'];
+// echo $verifyQuestionNull; renvoi bien "couleur" pour ADRPEL
+
 
 
 if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+    echo 'Mauvais identifiant ou mot de passe (USERNAME INTROUVABLE) !';
 }
 else
 {
     if($isPasswordCorrect)
     {
-        if($verifyQuestionNull == null) {
+        if(empty($verifyQuestionNull)) {
+            header('Location: ../html/formFirstCo.php');
+        }
+        else
+        {
             session_start();
             $_SESSION['id_user'] = $resultat['id_user'];
             $_SESSION['username'] = $username;
             header('Location: ../html/home.php');
             exit;
         }
-        else
-        {
-            header('Location: ../html/formFirstCo.php');
-        }
     }
     else
     {
-        echo 'Mauvais identifiant ou mot de passe !';
+        echo 'Mauvais identifiant ou mot de passe ! (MOT DE PASSE INCORRECTE)';
     }
 }
 
