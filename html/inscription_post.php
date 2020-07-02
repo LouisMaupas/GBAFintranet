@@ -20,7 +20,7 @@
     $question = $_POST['question'];
     $answer = $_POST['answer'];
 
-    echo "$id_user + $fname + $lname + $username + $password + $question +$answer";
+    echo "$id_user + $fname + $lname + $username + $password + $question + $answer";
 
     // Insertion
     $req = $bdd->prepare('INSERT INTO account(id_user, fname, lname, username, password, question, answer  ) VALUES (:id_user, :fname, :lname, :username, :password, :question, :answer)');
