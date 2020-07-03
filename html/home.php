@@ -67,7 +67,7 @@ echo 'Session : ' . $_SESSION['username'];
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                    <a href="actorDSA.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>
@@ -84,7 +84,7 @@ echo 'Session : ' . $_SESSION['username'];
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                        <a href="actorDSA.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>
@@ -104,7 +104,7 @@ echo 'Session : ' . $_SESSION['username'];
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                        <a href="actorDSA.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>
@@ -121,7 +121,7 @@ echo 'Session : ' . $_SESSION['username'];
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                        <a href="actorDSA.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>
