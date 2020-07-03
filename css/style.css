@@ -5,6 +5,8 @@ h2, h3 {
 a:link
 {
 text-decoration:none;
+color: black;
+
 }
 
 .text-red {
@@ -96,8 +98,6 @@ text-decoration:none;
     margin-top: 4em;
 }
 
-/* UNIQUEMENT HOME */
-
 #home-presentation-text {
     font-size: 1.17em;
 }
@@ -131,11 +131,20 @@ text-decoration:none;
 }
 
 .home-actor-button {
+    display:block;
+    text-align: center;
+    background-color: #EFEFEF;
+    border-color: #767676;
+    border-style: solid;
+    border-radius: 5px;
     display: flex;
     align-self: flex-end;
     margin-bottom: 1em;
     margin-right: 2%;
-    height: 50%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-left: 1px;
+    block-size: 35px;
 }
 
 /* UNIQUEMENT ACTOR */ 

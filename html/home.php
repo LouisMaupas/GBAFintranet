@@ -63,7 +63,11 @@ echo 'Session : ' . $_SESSION['username'];
                             <a href="https://www.formationsco.com/">formationsco.com</a>
                         </div>   
                     </div>
-                        <input class="home-actor-button button" type="button" value="lire la suite">
+                    <div class="home-actor-button ">
+                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                            Lire la suite
+                        </a>
+                    </div>
                 </div>
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
@@ -76,7 +80,11 @@ echo 'Session : ' . $_SESSION['username'];
                             <a href="https://www.un.org/en/sections/what-we-do/protect-human-rights/">Protectpeople.com</a>
                         </div>   
                     </div>
-                    <input class="home-actor-button button" type="button" value="lire la suite">
+                    <div class="home-actor-button ">
+                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                            Lire la suite
+                        </a>
+                    </div>
                 </div>
 
 
@@ -92,15 +100,12 @@ echo 'Session : ' . $_SESSION['username'];
                             <a href="http://www.dsafrance.fr/">DSAFrance.fr</a>
                         </div>   
                     </div>
-                    <div class="button home-actor-button ">
-                    <a href="C:\wamp64\www\projet3\html\actorDSA.php">
-                        Lire la suite
-                    </a>
+                    <div class="home-actor-button ">
+                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                            Lire la suite
+                        </a>
                     </div>
                 </div>
-
-
-
 
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
@@ -112,7 +117,11 @@ echo 'Session : ' . $_SESSION['username'];
                             <a href="https://www.cci.fr/web/auto-entrepreneur">CDE.fr</a>
                         </div>   
                     </div>
-                    <input class="home-actor-button button" type="button" value="lire la suite">
+                    <div class="home-actor-button ">
+                        <a href="C:\wamp64\www\projet3\html\actorDSA.php">
+                            Lire la suite
+                        </a>
+                    </div>
                 </div> 
              </div>     
         </section>
