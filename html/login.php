@@ -1,8 +1,6 @@
-<!-- eco a supprimer lors du déploiement -->
-<?php session_start();
+<?php session_start(); 
 echo 'Session : ' . $_SESSION['username'];
-?> 
-<!-- Si deja co rediriger vres home -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

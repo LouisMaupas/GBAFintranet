@@ -47,6 +47,7 @@ else
             session_start();
             $_SESSION['id_user'] = $result['id_user'];
             $_SESSION['username'] = $username;
+            $_SESSION['question'] = $result['question'];
             header('Location: ../html/home.php');
             exit;
         }
