@@ -4,6 +4,16 @@ if (!(isset($_SESSION['question']) && $_SESSION['question'] != ''))
     header ("Location: login.php");
 }
 echo 'Session : ' . $_SESSION['username'];
+
+// Connexion à la BDD
+try
+{
+$bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+die('Erreur lors de la connexion à la base de données');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,14 +40,15 @@ echo 'Session : ' . $_SESSION['username'];
                 Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
                 </p>
         </div>
-
         <div id="actor-bot">
             <div id="actor-bot-info">
                 <div id="comments-counter">
                     X COMMENTAIRES
                 </div>
                 <div id="like-programs">
-                    <button id="add-comment-button" class="button">Nouveau <br/> commentaire</button>
+                    <a href="newCom.php" target="blank" id="add-comment-button"class="button" >
+                        Nouveau commentaire
+                    </a>
                     <div id="like-or-dislike">
                         <span id="number-of-likes"> 0 </span>
                         <input class="button-like" type="button" name="like" value="like">
@@ -48,15 +59,6 @@ echo 'Session : ' . $_SESSION['username'];
             </div>
 
             <?php
-            // Connexion à la BDD
-            try
-            {
-                $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
-            }
-            catch (Exception $e)
-            {
-                    die('Erreur lors de la connexion à la base de données');
-            }
             // Récupération des derniers messages dans la BDD
             $reponse = $bdd->query('SELECT id_user, date_add, post FROM post ORDER BY date_add DESC LIMIT 0, 2') or die(print_r($bdd->errorInfo()));
 
