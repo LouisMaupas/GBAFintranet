@@ -60,12 +60,18 @@ die('Erreur lors de la connexion à la base de données');
 
             <?php
             // Récupération des derniers messages dans la BDD
-            $reponse = $bdd->query('SELECT /*username,*/ date_add, post FROM post/*, account*/ WHERE id_actor = 3 ORDER BY date_add DESC LIMIT 0, 10') or die(print_r($bdd->errorInfo()));
+            $reponse = $bdd->query('SELECT post.id_user, post.date_add, post.post, account.username 
+            FROM post 
+            INNER JOIN account
+            ON post.id_user = account.id_user
+            WHERE id_actor = 3 
+            ORDER BY date_add DESC 
+            LIMIT 0, 10') or die(print_r($bdd->errorInfo()));
             
             // Affichage message 
             while ($donnees = $reponse->fetch())
             {
-                echo '<p><strong>' . /*htmlspecialchars($donnees['username']) . " <br/> " .*/ '</strong> : ' . htmlspecialchars($donnees['date_add']) . "  <br/> " . htmlspecialchars($donnees['post']) . '</p>';
+                echo '<p><strong>' . htmlspecialchars($donnees['username']) . " <br/> " . '</strong> : ' . htmlspecialchars($donnees['date_add']) . "  <br/> " . htmlspecialchars($donnees['post']) . '</p>';
             }
 
             $reponse->closeCursor();
