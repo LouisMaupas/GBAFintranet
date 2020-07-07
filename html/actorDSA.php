@@ -34,7 +34,7 @@ die('Erreur lors de la connexion à la base de données');
             </div>
             <h2>Titre H2 : DSA FRANCE </h2>
             <a href="www.google.com">Lien</a>
-            <p>contenu textuel : Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
+            <p> Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
                 Notre philosophie : s’adapter à chaque entreprise.
                 Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
@@ -43,6 +43,12 @@ die('Erreur lors de la connexion à la base de données');
         <div id="actor-bot">
             <div id="actor-bot-info">
                 <div id="comments-counter">
+                    <?php 
+                    // on récupère le nombre d'apparition de l'id actor en question
+                    $count = $bdd->query('SELECT COUNT(id_actor) FROM post WHERE id_actor = 3'); 
+                    // Puis on l'affiche
+                    //echo settype($count, 'string') ;        
+                    ?>
                     X COMMENTAIRES
                 </div>
                 <div id="like-programs">
@@ -69,9 +75,9 @@ die('Erreur lors de la connexion à la base de données');
             LIMIT 0, 10') or die(print_r($bdd->errorInfo()));
             
             // Affichage message 
-            while ($donnees = $reponse->fetch())
+            while ($datas = $reponse->fetch())
             {
-                echo '<p><strong>' . htmlspecialchars($donnees['username']) . " <br/> " . '</strong> ' . htmlspecialchars($donnees['date_add']) . "  <br/> " . htmlspecialchars($donnees['post']) . '</p>';
+                echo '<p><strong>' . htmlspecialchars($datas['username']) . " <br/> " . '</strong> ' . htmlspecialchars($datas['date_add']) . "  <br/> " . htmlspecialchars($datas['post']) . '</p>';
             }
 
             $reponse->closeCursor();
