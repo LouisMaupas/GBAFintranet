@@ -31,11 +31,11 @@ die('Erreur lors de la connexion à la base de données');
             <form action="../php/scripts.php" method="post">
                 <p>
                     <p>
-                        Quel est l'acteur concerné par votre commentaire ? ?<br />
-                        <input type="radio" name="actor" value="radio-one" id="radio-one" required value="1"/> <label for="radio-one">Formation&co</label> 
-                        <input type="radio" name="actor" value="radio-two" id="radio-two" /> <label for="radio-two">Protectpeople</label> 
-                        <input type="radio" name="actor" value="radio-three" id="radio-three" /> <label for="radio-three">Dsa France</label> 
-                        <input type="radio" name="actor" value="radio-four" id="radio-four" /> <label for="radio-four">CDE</label> 
+                        Quel est l'acteur concerné par votre commentaire ?<br />
+                        <input type="radio" name="actor" value="1" id="radio-one" required value="1"/> <label for="radio-one">Formation&co</label> 
+                        <input type="radio" name="actor" value="2" id="radio-two" /> <label for="radio-two">Protectpeople</label> 
+                        <input type="radio" name="actor" value="3" id="radio-three" /> <label for="radio-three">Dsa France</label> 
+                        <input type="radio" name="actor" value="4" id="radio-four" /> <label for="radio-four">CDE</label> 
                     </p>    
                     <label for="post">Ecrivez votre commentaire ci-dessous</label> :<br/><textarea name="post" id="post" rows="10" cols="100" ></textarea>
                     <input type="submit" value="Envoyer" />

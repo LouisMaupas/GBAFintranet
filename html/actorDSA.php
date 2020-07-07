@@ -71,7 +71,7 @@ die('Erreur lors de la connexion à la base de données');
             // Affichage message 
             while ($donnees = $reponse->fetch())
             {
-                echo '<p><strong>' . htmlspecialchars($donnees['username']) . " <br/> " . '</strong> : ' . htmlspecialchars($donnees['date_add']) . "  <br/> " . htmlspecialchars($donnees['post']) . '</p>';
+                echo '<p><strong>' . htmlspecialchars($donnees['username']) . " <br/> " . '</strong> ' . htmlspecialchars($donnees['date_add']) . "  <br/> " . htmlspecialchars($donnees['post']) . '</p>';
             }
 
             $reponse->closeCursor();
