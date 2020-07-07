@@ -21,4 +21,7 @@ echo "   Voici ce que le form envoi :    " . $_SESSION['id_user']. "  " . $_POST
 
 // Redirection du visiteur vers la page home
 //header('Location: ./html/home.php');
+
+
+
 ?>

@@ -28,7 +28,7 @@ die('Erreur lors de la connexion à la base de données');
     <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
                 
         <div id="hidden" >
-            <form action="../php/scripts.php" method="post">
+            <form action="../php/newComScript.php" method="post">
                 <p>
                     <p>
                         Quel est l'acteur concerné par votre commentaire ?<br />

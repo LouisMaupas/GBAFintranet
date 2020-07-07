@@ -19,7 +19,7 @@ echo 'Session : ' . $_SESSION['username'];
         <div id="profile-main">
             <div class="forms form-infos">
             <span class="title-one">Mes informations</span>
-                <form method="POST" action="" class="">
+                <form method="POST" action="../php/updateProfil.php" class="">
                     <p class="title-two">
                         <br/>
                         <label for="last-name">Nom</label>
@@ -29,6 +29,10 @@ echo 'Session : ' . $_SESSION['username'];
                         <label for="first-name">Prénom</label>
                         <br/>
                         <input type="text" name="first-name" id="first-name">
+                        <br/>
+                        <label for="username">Nom utilisateur (3 premières lettre prénom + 3 premières lettres du nom de famille)</label>
+                        <br/>
+                        <input type="text" id="username" name="username">
                         <br/>
                         <label for="mail">E-mail</label>
                         <br/>
