@@ -13,11 +13,11 @@ echo 'Session : ' . $_SESSION['username'];
 
 
 //requête préparée
-//$req = $bdd->prepare('INSERT INTO post(id_user, id_actor, date_add, post) VALUES(?, ?, ?, ?)');
+$req = $bdd->prepare('INSERT INTO post(id_user, id_actor, post, date_add) VALUES(?, ?, ?, NOW())');
 // insertion message
-//$req->execute(array($_SESSION['username'], $_POST['radio'], $_SESSION['date'], $_POST[''], $_POST['post']));
+$req->execute(array($_SESSION['id_user'], $_POST['actor'], $_POST['post']));
 
-echo $_SESSION['username'] . $_POST['post'];
+echo $_SESSION['id_user']. "  " . $_POST['actor'] . "    " . $_POST['post'];
 
 // Redirection du visiteur vers la page home
 //header('Location: ./html/home.php');
