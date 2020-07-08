@@ -25,7 +25,7 @@ die('Erreur lors de la connexion à la base de données');
 </head>
 <body>
     <div id="container">
-    <?php require 'header.html'; ?>
+    <?php require 'header.php'; ?>
         <div id="actor-top">
             <div>
                 <p>

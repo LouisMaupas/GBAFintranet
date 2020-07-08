@@ -13,7 +13,7 @@ session_destroy();
 <body>
 
 <div id="container">
-    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.php'; ?>
     <div id="logout-confirm">
         <p>
         Vous êtes bien déconnecté

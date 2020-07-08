@@ -25,7 +25,7 @@ die('Erreur lors de la connexion à la base de données');
 </head>
 <body>
     <div id="container">
-    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.php'; ?>
                 
         <div id="hidden" >
             <form action="../php/newComScript.php" method="post">

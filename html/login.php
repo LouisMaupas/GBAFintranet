@@ -11,7 +11,7 @@ echo 'Session : ' . $_SESSION['username'];
 </head>
 <body>
     <div id="container">
-    <?php require 'header.html'; ?>
+    <?php require 'header.php'; ?>
         <div id="index-main">
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>

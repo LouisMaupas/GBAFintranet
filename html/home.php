@@ -15,7 +15,7 @@ echo 'Session : ' . $_SESSION['username'];
 </head>
 <body>
     <div id="container">
-    <?php require 'C:\wamp64\www\projet3\html\header.html'; ?>
+    <?php require 'C:\wamp64\www\projet3\html\header.php'; ?>
         <!-- MAIN 1/2-->
         <div id="home-presentation">
             <div>
