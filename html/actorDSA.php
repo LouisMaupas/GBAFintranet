@@ -44,12 +44,14 @@ die('Erreur lors de la connexion à la base de données');
             <div id="actor-bot-info">
                 <div id="comments-counter">
                     <?php 
-                    // on récupère le nombre d'apparition de l'id actor en question
+                    // récupère le nombre d'apparition de l'id actor3
                     $count = $bdd->query('SELECT COUNT(id_actor) FROM post WHERE id_actor = 3'); 
                     // Puis on l'affiche
-                    //echo settype($count, 'string') ;        
+                    $count->execute();
+                    $result = $count->fetchColumn();
+                    echo ($result) ;        
                     ?>
-                    X COMMENTAIRES
+                     COMMENTAIRES
                 </div>
                 <div id="like-programs">
                     <a href="newCom.php" target="blank" id="add-comment-button"class="button" >
@@ -77,7 +79,7 @@ die('Erreur lors de la connexion à la base de données');
             // Affichage message 
             while ($datas = $reponse->fetch())
             {
-                echo '<p><strong>' . htmlspecialchars($datas['username']) . " <br/> " . '</strong> ' . htmlspecialchars($datas['date_add']) . "  <br/> " . htmlspecialchars($datas['post']) . '</p>';
+                echo '<p><b>' . htmlspecialchars($datas['username']) . " <br/> " . '</b> ' . htmlspecialchars($datas['date_add']) . "  <br/> " . htmlspecialchars($datas['post']) . '</p>';
             }
 
             $reponse->closeCursor();
