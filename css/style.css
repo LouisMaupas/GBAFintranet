@@ -3,6 +3,10 @@ h2, h3 {
     color: black;
 }
 
+ul, li {
+    list-style: none;
+}
+
 a:link
 {
 text-decoration:none;

@@ -54,7 +54,8 @@ die('Erreur lors de la connexion à la base de données');
                      COMMENTAIRES
                 </div>
                 <div id="like-programs">
-                    <a href="newCom.php" target="blank" id="add-comment-button"class="button" >
+                    <!-- penser a rempalcer selon l'acteur voulu par href="newCom.php?actoris=3"  -->
+                    <a href="newCom.php?actoris=3" target="blank" id="add-comment-button"class="button" >
                         Nouveau commentaire
                     </a>
                     <div id="like-or-dislike">

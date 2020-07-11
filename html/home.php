@@ -4,6 +4,20 @@ if (!(isset($_SESSION['question']) && $_SESSION['question'] != ''))
     header ("Location: login.php");
 }
 echo 'Session : ' . $_SESSION['username'];
+
+// Connexion à la BDD
+try
+{
+$bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
+}
+catch (Exception $e)
+{
+die('Erreur lors de la connexion à la base de données');
+}
+// on pourrait le remplacer par : $idActor = 3; ??
+//$pdoStat = $bdd->prepare("SELECT id_actor FROM actor WHERE id_actor=3");
+//$executeIsOk = $pdoStat->execute();
+//$actor = $pdoStat->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,17 +58,18 @@ echo 'Session : ' . $_SESSION['username'];
                     </h2>
             </div>
             <!--OUTIL DE TRI DES ACTEURS-->
-                <label for="actor-select">Trier par :</label>
-                    <select name="actor" id="actor-select">
-                        <option value="">-- Veuillez choisir une option --</option>
-                        <option value="most-comment">Le plus de commentaires en premier</option>
-                        <option value="most-like">Le plus de likes en premier</option>
-                        <option value="less-comment">Le moins de commentaires en premier</option>
-                        <option value="less-like">Le moins de likes en premier</option>
-                        <option value="alphabetical">Par ordre alphabétique</option>
-                        <option value="alphabetical-reverse">Par ordre alphabétique inversé</option>
-                    </select>
+            <label for="actor-select">Trier par :</label>
+                <select name="actor" id="actor-select">
+                    <option value="">-- Veuillez choisir une option --</option>
+                    <option value="most-comment">Le plus de commentaires en premier</option>
+                    <option value="most-like">Le plus de likes en premier</option>
+                    <option value="less-comment">Le moins de commentaires en premier</option>
+                    <option value="less-like">Le moins de likes en premier</option>
+                    <option value="alphabetical">Par ordre alphabétique</option>
+                    <option value="alphabetical-reverse">Par ordre alphabétique inversé</option>
+                </select>
             <div id="home-list-actors">
+
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-formation-co.png" alt="logo F&CO"/>
@@ -104,7 +119,7 @@ echo 'Session : ' . $_SESSION['username'];
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorDSA.php" target="blank" >
+                        <a href="actorDSA.php" target="blank">
                             Lire la suite
                         </a>
                     </div>

@@ -15,6 +15,7 @@ catch (Exception $e)
 die('Erreur lors de la connexion à la base de données');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +28,12 @@ die('Erreur lors de la connexion à la base de données');
     <div id="container">
     <?php require 'C:\wamp64\www\projet3\html\header.php'; ?>
                 
-        <div id="hidden" >
-            <form action="../php/newComScript.php" method="post">
+        <div>
+            <form action="../php/newComScript.php?actoris=<?= $_GET['actoris'] ?>" method="POST">
                 <p>
-                    <p>
-                        Quel est l'acteur concerné par votre commentaire ?<br />
-                        <input type="radio" name="actor" value="1" id="radio-one" required value="1"/> <label for="radio-one">Formation&co</label> 
-                        <input type="radio" name="actor" value="2" id="radio-two" /> <label for="radio-two">Protectpeople</label> 
-                        <input type="radio" name="actor" value="3" id="radio-three" /> <label for="radio-three">Dsa France</label> 
-                        <input type="radio" name="actor" value="4" id="radio-four" /> <label for="radio-four">CDE</label> 
-                    </p>    
-                    <label for="post">Ecrivez votre commentaire ci-dessous</label> :<br/><textarea name="post" id="post" rows="10" cols="100" ></textarea>
-                    <input type="submit" value="Envoyer" />
+                    <label for="post">Ecrivez votre commentaire ci-dessous</label> :<br/>
+                    <textarea name="post" id="post" rows="10" cols="100" ></textarea><br/>
+                    <input type="submit" value="Envoyer"/>
                 </p>
             </form>
         </div>
