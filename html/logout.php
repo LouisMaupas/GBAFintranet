@@ -17,10 +17,12 @@ session_destroy();
     <div id="logout-confirm">
         <p>
         Vous êtes bien déconnecté
+        <?php header('refresh: 5; url=login.php') ?>
         </p>
     </div>
-    <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
+        <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
 </div>
     
 </body>
 </html>
+
