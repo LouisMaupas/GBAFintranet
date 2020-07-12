@@ -52,7 +52,7 @@ die('Erreur lors de la connexion à la base de données');
                     echo ($result) ;        
                     ?>
                      COMMENTAIRES
-                </div>
+                </div> <!-- PENSER A CHANGER LE NOM like-programs par un truc + parlatn + global-->
                 <div id="like-programs">
                     <!-- penser a rempalcer selon l'acteur voulu par href="newCom.php?actoris=3"  -->
                     <a href="newCom.php?actoris=3" target="blank" id="add-comment-button"class="button" >
@@ -60,9 +60,9 @@ die('Erreur lors de la connexion à la base de données');
                     </a>
                     <div id="like-or-dislike">
                         <span id="number-of-likes"> 0 </span>
-                        <input class="button-like" type="button" name="like" value="like">
-                        <input class="button-dislike" type="button" name="like" value="dislike">
-
+                        <a href="../php/like.php?vote=1&actoris=3"> <img src="#" alt="image like"/></a>
+                        <span id="number-of-likes"> 0 </span>
+                        <a href="like.php?vote=2&actoris=3"> <img src="#" alt="image dislike"/></a>
                     </div>
                 </div>
             </div>
