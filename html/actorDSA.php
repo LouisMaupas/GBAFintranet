@@ -14,14 +14,6 @@ catch (Exception $e)
 {
 die('Erreur lors de la connexion à la base de données');
 }
-
-//compteur de likes
-/*
-$likeCounter = $bdd->prepare('SELECT id_vote FROM vote WHERE');
-$likeCounter->execute();
-$likeCounter = $likes->row();*/
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
