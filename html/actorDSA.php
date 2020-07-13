@@ -59,9 +59,19 @@ die('Erreur lors de la connexion à la base de données');
                         Nouveau commentaire
                     </a>
                     <div id="like-or-dislike">
-                        <span id="number-of-likes"> 0 </span>
+                        <!-- penser a changer l'ID actor -->
+                        <?php 
+                        $likes = $bdd->prepare('SELECT id_vote FROM vote WHERE id_actor = 3 AND choice = 1');
+                        $likes->execute();
+                        $likes = $likes->rowCount();
+                        $dislikes = $bdd->prepare('SELECT id_vote FROM vote WHERE id_actor = 3 AND choice = 2');
+                        $dislikes->execute();
+                        $dislikes = $dislikes->rowCount();
+                        ?>
+                        <span id="number-of-likes"> (<?= $likes ?>) </span>
+                        <!-- penser a rempalcer selon l'acteur voulu -->
                         <a href="../php/like.php?vote=1&actoris=3"> <img src="#" alt="image like"/></a>
-                        <span id="number-of-likes"> 0 </span>
+                        <span id="number-of-likes"> (<?= $dislikes ?>)  </span>
                         <a href="../php/like.php?vote=2&actoris=3"> <img src="#" alt="image dislike"/></a>
                     </div>
                 </div>
