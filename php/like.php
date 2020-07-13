@@ -22,23 +22,21 @@ if(isset($_GET['vote'],$_GET['actoris']) AND !empty($_GET['vote']) AND !empty($_
     $voteDislike = 2;
         // si c'est un like
        if($getVote == 1) {
-           //condition pour limiter le nombre de like
-           // on recupere 
-           $checkLike = $bdd->prepare('SELECT COUNT(id_user) FROM vote WHERE id_actor = ? AND id_user = ?');
+           // on recupere les infos 
+           $checkLike = $bdd->prepare('SELECT COUNT(id_user) AS user FROM vote WHERE id_actor = ? AND id_user = ?');
            $checkLike->execute(array($getActor, $sessionId));
-           // la condition
-           echo " <br/> le CheckLike est egale à : " . $checkLike->fetchColumn() . ". Si il est <=1 on va dans if pour ajouter+1 sinon on va dans else pour-1 <br/> ";
-           if($checkLike->fetchColumn()<=1) {
+           $donnees = $checkLike->fetch();
+            $checkLike->closeCursor();
+            $checkLike = $donnees['user'];
+           // on verifie que user a pas deja like ou dislike
+           if($checkLike == 0) {
                // on ajoute le like
-            echo "On est dans la boucle if et checklike est egal à : " . $checkLike->fetchColumn() . " . Voila ";
             $insert = $bdd->prepare('INSERT INTO vote (id_actor, id_user, choice) VALUES (?, ?, ?)');
             $insert->bindValue(1, $getActor, PDO::PARAM_INT);
             $insert->bindValue(2, $_SESSION['id_user'], PDO::PARAM_INT);
             $insert->bindValue(3, $voteLike, PDO::PARAM_INT);   
             $insert->execute();
            } else {
-            echo "On est dans la boucle else et le compte checkLike est de : " . $checkLike->fetchColumn() . " . Voila";
-                // on supprime le like
                 $del = $bdd->prepare('DELETE FROM vote WHERE id_actor = ? AND id_user = ?');
                 $del->bindValue(1, $getActor, PDO::PARAM_INT);
                 $del->bindValue(2, $_SESSION['id_user'], PDO::PARAM_INT);
@@ -46,30 +44,28 @@ if(isset($_GET['vote'],$_GET['actoris']) AND !empty($_GET['vote']) AND !empty($_
            }
         // si c'est un dislike       
        } elseif($getVote == 2) {
-           //condition pour limiter le nombre de like
-           // on recupere 
-           $checkLike = $bdd->prepare('SELECT id_user FROM vote WHERE id_actor = ? AND id_user = ?');
+           // on recupere les infos 
+           $checkLike = $bdd->prepare('SELECT COUNT(id_user) AS user FROM vote WHERE id_actor = ? AND id_user = ?');
            $checkLike->execute(array($getActor, $sessionId));
-           // la condition
-           if($checkLike->fetchColumn()>=1) {
-               // on supprime le dilike
-               $del = $bdd->prepare('DELETE FROM vote WHERE id_actor = ? AND id_user = ?');
-               $del->bindValue(1, $getActor, PDO::PARAM_INT);
-               $del->bindValue(2, $_SESSION['id_user'], PDO::PARAM_INT);
-               $del->execute();
-           } else {
-               // on ajoute le like
+           $donnees = $checkLike->fetch();
+            $checkLike->closeCursor();
+            $checkLike = $donnees['user'];
+           // on verifie que user a pas deja like ou dislike 
+           if($checkLike == 0) {
+               // on ajoute le dislike
             $insert = $bdd->prepare('INSERT INTO vote (id_actor, id_user, choice) VALUES (?, ?, ?)');
             $insert->bindValue(1, $getActor, PDO::PARAM_INT);
             $insert->bindValue(2, $_SESSION['id_user'], PDO::PARAM_INT);
             $insert->bindValue(3, $voteDislike, PDO::PARAM_INT);   
             $insert->execute();
+           } else {
+                $del = $bdd->prepare('DELETE FROM vote WHERE id_actor = ? AND id_user = ?');
+                $del->bindValue(1, $getActor, PDO::PARAM_INT);
+                $del->bindValue(2, $_SESSION['id_user'], PDO::PARAM_INT);
+                $del->execute();
            }
-
-        //éxécution de la requete préparée 
-        $insertExecute = $insert->execute();  
         }
-       /* header('Location: ../html/actorDSA.php');*/
+       header('Location: ../html/actorDSA.php');
        } else {
            exit('erreur');
         }

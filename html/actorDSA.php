@@ -62,7 +62,7 @@ die('Erreur lors de la connexion à la base de données');
                         <span id="number-of-likes"> 0 </span>
                         <a href="../php/like.php?vote=1&actoris=3"> <img src="#" alt="image like"/></a>
                         <span id="number-of-likes"> 0 </span>
-                        <a href="like.php?vote=2&actoris=3"> <img src="#" alt="image dislike"/></a>
+                        <a href="../php/like.php?vote=2&actoris=3"> <img src="#" alt="image dislike"/></a>
                     </div>
                 </div>
             </div>
