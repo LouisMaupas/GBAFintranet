@@ -14,24 +14,15 @@ echo 'Session : ' . $_SESSION['username'];
     <?php require 'header.php'; ?>
         <div id="index-main">
             <div class="forms form-login">
-                <span class="title-one">Se connecter</span>
+            <span class="title-one">Entrez votre identifiant</span>
                 <form method="POST" action="../php/transition.php" class="form">
                     <p class="title-two">
-                        <label for="username">Identifiant (3 premieres lettres prénom + 3 noms)</label>
+                        <label for="username">Vous recevrez votre nouveau mot de passe dans votre boite mail </label>
                         <br/>
                         <input type="text" name="username" id="username" required>
-                        <br/>
-                        <label for="password-login">Mot de passe </label>
-                        <br/>
-                        <input type="password" name="password-login" id="password-login" required>
-                        <br/>
-                        <input type="checkbox" name="stay-connected" id="stay-connected" /> <label for="stay-connected">Rester connecté</label><br /> 
                         <input type="submit" value="Envoyer" class="form-button-send">
                     </p>                    
-                </form>  
-                <a href="newPass.php" target="blank">
-                    Mot de passe oublié
-                </a>                
+                </form>            
             </div>
         </div>  
        <?php require 'footer.php'; ?>
