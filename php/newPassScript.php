@@ -1,17 +1,13 @@
 <?php
+// connexoin bdd
+
 
 //recuperation du login
 
-// check dans la bbd le mail associé
+// check dans la bbd la question secrete associé au login
 
-// generation d'un nouveau mdp
+// envoi la question à new pass question
 
-
-// remplacement du nouveau mdp
-
-
-// envoi du nvx mdp
-
-
+header('Location: ../html/newPassQuestion.php');
 
 ?>
