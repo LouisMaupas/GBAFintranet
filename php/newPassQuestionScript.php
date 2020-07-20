@@ -26,18 +26,27 @@ if ($answerForm === $answerBdd ) {
     echo "ça match";
         // genere nvx mdp aléatoire
         function password() { 
-            // chaine de caractères qui sera mis dans le désordre:
-            $string = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // 62 caractères au total
-            // on mélange la chaine avec la fonction str_shuffle(), propre à PHP
-            $string = str_shuffle($string);
-            // ensuite on coupe à la longueur voulue avec la fonction substr(), propre à PHP aussi
-            $string = substr($string,0,10);
-            // ensuite on retourne notre chaine aléatoire de "longueur" caractères:
-            return $string;
+            // chaine de caractères
+            $password = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            // on mélange
+            $password = str_shuffle($password);
+            // on coupe à 10 caracteres
+            $password = substr($password,0,10);
+            // on retourne:
+            return $password;
         }
+        $pass = password(); 
         // hachage du nouveau pass
-        $newPassword = password_hash($password, PASSWORD_DEFAULT);
+        $newPassword = password_hash($pass, PASSWORD_DEFAULT);
         // insertion de celui-ci dans la bdd
+        // sinon récupérer tout le profil et tout le réinser entierement sauf rempalcer le nouveau mdp
+        $del = $bdd->prepare('ALTER TABLE account DROP COLUMN password WHERE username = :username');
+        $del->bindValue(2, $_SESSION['username'], PDO::PARAM_STR);
+        $del->execute();
+        $insert = $bdd->prepare('INSERT INTO account(password) VALUES (:password) WHERE username = :username');
+        $insert->bindValue(1, $newPassword, PDO::PARAM_STR);
+        $insert->bindValue(2, $_SESSION['username'], PDO::PARAM_STR);
+        $insert->execute();
     // recuperation du mail
     // envoi par mail du nvx mdp
     // redirection login page 
