@@ -18,14 +18,16 @@ $username = $_SESSION['username'];
 $log = $bdd->prepare('SELECT * from account where username = :username');
 $log->execute(array('username' => $username));
 $result = $log->fetch();
-//
 $answerBdd = $result['answer'];
-echo "form = " . $answerForm . " answer bdd = " . $answerBdd . " ! ";
+
 
 // condition if answer_form = answer_bdd
 if ($answerForm === $answerBdd ) {
     echo "ça match";
-    // genere nvx mdp
+        // genere nvx mdp aléatoire
+        // hachage du nouveau pass
+        $newPassword = password_hash($password, PASSWORD_DEFAULT);
+        // insertion de celui-ci dans la BDD
     // recuperation du mail
     // envoi par mail du nvx mdp
     // redirection login page 
