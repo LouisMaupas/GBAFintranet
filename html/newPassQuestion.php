@@ -14,11 +14,13 @@ echo 'Session : ' . $_SESSION['username'];
     <?php require 'header.php'; ?>
         <div id="index-main">
             <div class="forms form-login">
-            <span class="title-one">Repondez à la question secrete pour recevoir votre nouveau mot de passe par mail</span>
+            <span class="title-one">
+                <?php echo "Bonjour " . $_SESSION['username'] ?>
+                Repondez à la question secrete pour recevoir votre nouveau mot de passe par mail
+            </span>
             <?php 
-            $question = "Quel est votre couleur pref ?";
-            echo $question ?>
-                <form method="POST" action="#" class="form">
+            echo "La question est : " . $_SESSION['question'] ?>
+                <form method="POST" action="../php/newPassQuestionScript.php" class="form">
                     <p class="title-two">
                         <label for="answer"></label>
                         <br/>
