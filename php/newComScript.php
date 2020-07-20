@@ -23,23 +23,28 @@ if(isset($_POST['post'],$_GET['actoris'])) {
     $check = $donnees['post'];
     echo "<br/> dans check = donnees['post'] on a  " . $check . "  et dans post on a "  . $post ; 
     // on verifie qu'il n'y ai pas déjà un commentaire
-           if($check == 0) {
-               // on l'ajoute
-            $insert = $objetPdo->prepare('INSERT INTO post (id_user, id_actor, date_add, post) VALUES (?, ?, NOW() , ?)');
-            $insert->bindValue(1, $id_user, PDO::PARAM_INT);
-            $insert->bindValue(2, $id_actor, PDO::PARAM_INT);
-            $insert->bindValue(3, $post, PDO::PARAM_STR);   
-            $insert->execute();
-           } else {
-            $del = $objetPdo->prepare('DELETE post WHERE id_actor = ? AND id_user = ?');
-            $del->bindValue(1, $id_actor, PDO::PARAM_INT);
-            $del->bindValue(2, $id_user, PDO::PARAM_INT);
-            $del->execute();
-            $insert = $objetPdo->prepare('INSERT INTO post (id_user, id_actor, date_add, post) VALUES (?, ?, NOW() , ?)');
-            $insert->bindValue(1, $id_user, PDO::PARAM_INT);
-            $insert->bindValue(2, $id_actor, PDO::PARAM_INT);
-            $insert->bindValue(3, $post, PDO::PARAM_STR);   
-            $insert->execute();
+    var_dump($check);
+           if($check >= 1) { //du plus complexe au général
+            echo "nous sommes dans le cas 1";
+            $insert = $objetPdo->prepare('UPDATE post 
+            SET
+            date_add = NOW(),
+            post = :post 
+            VALUES (?, ?, NOW() , ?)
+            WHERE id_user = :id_user
+            AND id_actor = :id_actor');
+            $insert->execute(array(
+                'id_user' => $id_user,
+                'id_actor' => $id_actor,
+                'post' => $post));
+           } elseif($check == 0) { //update
+            // prevenir usager qu'il a deja laissé un com
+     echo "nous sommes dans le cas 2"; 
+     $insert = $objetPdo->prepare('INSERT INTO post (id_user, id_actor, date_add, post) VALUES (?, ?, NOW() , ?)');
+     $insert->bindValue(1, $id_user, PDO::PARAM_INT);
+     $insert->bindValue(2, $id_actor, PDO::PARAM_INT);
+     $insert->bindValue(3, $post, PDO::PARAM_STR);   
+     $insert->execute();
            }
        // header('Location: ../html/actorDSA.php');
        } else {

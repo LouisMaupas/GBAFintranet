@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 // Récupération de l'utilisateur
-$req = $bdd->prepare('SELECT id_user, password, question FROM account WHERE username = :username');
+$req = $bdd->prepare('SELECT id_user, password, answer FROM account WHERE username = :username');
 $req->execute(array(
     'username' => $username
 ));
@@ -26,8 +26,8 @@ $result = $req->fetch();
 // Comparaison du pass envoyé via le formulaire avec la base
 $isPasswordCorrect = password_verify($password, $result['password']);
 
-//Voyons si l'user a deja un profil COMPLET enregistré dans la BDD, pour ça on vérifie si question secrete associé à l'user posté est pas vide
-$verifyQuestionNull = $result['question'];
+//Voyons si l'user a deja un profil COMPLET enregistré dans la BDD, pour ça on vérifie si reponse secrete associé à l'user posté est pas vide
+$verifyAnswerNull = $result['answer'];
 
 
 if (!$result)
@@ -38,7 +38,7 @@ else
 {
     if($isPasswordCorrect)
     {
-        if(empty($verifyQuestionNull)) {
+        if(empty($verifyAnswerNull)) {
             header('Location: ../html/formFirstCo.php');
             exit;
         }
@@ -47,7 +47,7 @@ else
             session_start();
             $_SESSION['id_user'] = $result['id_user'];
             $_SESSION['username'] = $username;
-            $_SESSION['question'] = $result['question'];
+            $_SESSION['answer'] = $result['answer'];
             header('Location: ../html/home.php');
             exit;
         }

@@ -1,9 +1,9 @@
 <?php session_start(); 
-if (!(isset($_SESSION['question']) && $_SESSION['question'] != '')) 
+if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'];
+echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
 
 // Connexion à la BDD
 try
@@ -15,6 +15,9 @@ try
         die('Erreur lors de la connexion à la base de données');
 }
 
+echo "fname  ". $_POST['first-name'] . "lanme " . $_POST['last-name']. "user " . $_POST['username']. "mail" .  $_POST['mail'] . "question" . $_POST['question-secret'] . "answer " . $_POST['answer-secret'] . $_POST['password'];
+
+if(!isset($_POST['submit'])){
 
 // récupération de l'id user
 $id_user = ($_SESSION['id_user']);
@@ -29,20 +32,23 @@ $answer = $_POST['answer-secret'];
 $password = $_POST['password'];
 $password = password_hash($password, PASSWORD_DEFAULT); 
 
-    echo "$id_user + $fname + $lname + $username + $password + $question + $answer + $mail";
 
 
     // mise à jour de la bdd
     $req = $bdd->prepare('UPDATE account(id_user, fname, lname, username, mail, password, question, answer) 
     WHERE id_user = :id_user 
-    VALUES (:id_user, :fname, :lname, :username, :password, :question, :answer)');
+    VALUES (:id_user, :fname, :lname, :username, :mail, :password, :question, :answer)');
     $req->execute(array(
         'id_user' => $id_user,
         'fname' => $fname,
         'lname' => $lname,
         'username' => $username,
+        'mail' => $mail,
         'password' => $password,
         'question' => $question,
         'answer' => $answer));
-
+var_dump($req);
     echo ' ça marche';
+} else {
+    echo "ça ne marche pas";
+}

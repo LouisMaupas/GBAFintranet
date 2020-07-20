@@ -1,9 +1,9 @@
 <?php session_start(); 
-if (!(isset($_SESSION['question']) && $_SESSION['question'] != '')) 
+if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'];
+echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@ echo 'Session : ' . $_SESSION['username'];
         <div id="profile-main">
             <div class="forms form-infos">
             <span class="title-one">Mes informations</span>
-                <form method="POST" action="../php/updateProfil.php" class="">
+                <form method="POST" action="../php/updateProfil.php">
                     <p class="title-two">
                         <br/>
                         <label for="last-name">Nom</label>

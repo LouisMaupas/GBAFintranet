@@ -1,5 +1,5 @@
 <?php session_start(); 
-if (!(isset($_SESSION['question']) && $_SESSION['question'] != '')) 
+if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
 {
     header ("Location: login.php");
 }

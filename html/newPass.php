@@ -1,5 +1,9 @@
 <?php session_start(); 
-echo 'Session : ' . $_SESSION['username'];
+if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
+{
+    header ("Location: login.php");
+}
+echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

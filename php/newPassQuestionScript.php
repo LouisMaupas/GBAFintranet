@@ -25,7 +25,7 @@ $answerBdd = $result['answer'];
 if ($answerForm === $answerBdd ) {
     echo "ça match";
         // genere nvx mdp aléatoire
-        function password() { 
+        function password() { // DEMANDER A l'USER de saisir son mdp puis update la bdd
             // chaine de caractères
             $password = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             // on mélange
@@ -40,6 +40,7 @@ if ($answerForm === $answerBdd ) {
         $newPassword = password_hash($pass, PASSWORD_DEFAULT);
         // insertion de celui-ci dans la bdd
         // sinon récupérer tout le profil et tout le réinser entierement sauf rempalcer le nouveau mdp
+
         $del = $bdd->prepare('ALTER TABLE account DROP COLUMN password WHERE username = :username');
         $del->bindValue(2, $_SESSION['username'], PDO::PARAM_STR);
         $del->execute();
