@@ -33,8 +33,14 @@ $password = $_POST['password'];
 $password = password_hash($password, PASSWORD_DEFAULT); 
 
     // mise à jour de la bdd
-    $req = $bdd->prepare('UPDATE account 
-    SET (fname = :fname, lname = :lname, username = :username, mail = :mail, password = :password, question = :question, answer = :answer
+    $req = $bdd->prepare('UPDATE account SET 
+    fname = :fname, 
+    lname = :lname, 
+    username = :username, 
+    mail = :mail, 
+    password = :password, 
+    question = :question, 
+    answer = :answer
     WHERE id_user = :id_user');
     $req->execute(array(
         'id_user' => $id_user,
