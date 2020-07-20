@@ -25,9 +25,19 @@ $answerBdd = $result['answer'];
 if ($answerForm === $answerBdd ) {
     echo "ça match";
         // genere nvx mdp aléatoire
+        function password() { 
+            // chaine de caractères qui sera mis dans le désordre:
+            $string = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // 62 caractères au total
+            // on mélange la chaine avec la fonction str_shuffle(), propre à PHP
+            $string = str_shuffle($string);
+            // ensuite on coupe à la longueur voulue avec la fonction substr(), propre à PHP aussi
+            $string = substr($string,0,10);
+            // ensuite on retourne notre chaine aléatoire de "longueur" caractères:
+            return $string;
+        }
         // hachage du nouveau pass
         $newPassword = password_hash($password, PASSWORD_DEFAULT);
-        // insertion de celui-ci dans la BDD
+        // insertion de celui-ci dans la bdd
     // recuperation du mail
     // envoi par mail du nvx mdp
     // redirection login page 
