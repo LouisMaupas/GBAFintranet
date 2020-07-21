@@ -3,7 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'] . "actor cest" . $_GET['actoris'];
 
 //connexion à la BDD
 $objetPdo = new PDO('mysql:hostname=localhost;dbname=projettroisbdd','root','');
@@ -18,9 +17,7 @@ if(isset($_POST['post'],$_GET['actoris'])) {
     $check->closeCursor();
     $check = $donnees['post'];
     // on verifie qu'il n'y ait pas déjà un commentaire
-    var_dump($check);
            if($check >= 1) {
-            echo "nous sommes dans le cas 1";
             $insert = $objetPdo->prepare('UPDATE post SET
             date_add = NOW(),
             post = :post          
@@ -32,18 +29,17 @@ if(isset($_POST['post'],$_GET['actoris'])) {
                 'post' => $post));
            } elseif($check == 0) {
             // prevenir usager qu'il a deja laissé un com
-     echo "nous sommes dans le cas 2"; 
      $insert = $objetPdo->prepare('INSERT INTO post (id_user, id_actor, date_add, post) VALUES (?, ?, NOW() , ?)');
      $insert->bindValue(1, $id_user, PDO::PARAM_INT);
      $insert->bindValue(2, $id_actor, PDO::PARAM_INT);
      $insert->bindValue(3, $post, PDO::PARAM_STR);   
      $insert->execute();
            }
-       // header('Location: ../html/actorDSA.php');
+       header('Location: ../html/actorDSA.php');
        } else {
            echo "erreur";
         }
          // Redirection du visiteur vers la page home
-//header('Location: ../html/home.php');
+header('Location: ../html/home.php');
 
 ?>

@@ -3,7 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'] . $_SESSION['answer'];
 
 // Connexion à la BDD
 try
@@ -33,7 +32,7 @@ die('Erreur lors de la connexion à la base de données');
                 </p>
             </div>
             <h2>Titre H2 : DSA FRANCE </h2>
-            <a href="www.google.com">Lien</a>
+            <a href="http://www.dsafrance.fr">Vers DSA France</a>
             <p> Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
                 Notre philosophie : s’adapter à chaque entreprise.
@@ -90,30 +89,23 @@ die('Erreur lors de la connexion à la base de données');
             // Affichage message 
             while ($datas = $reponse->fetch())
             {
-                echo '<p><b>' . htmlspecialchars($datas['username']) . " <br/> " . '</b> ' . htmlspecialchars($datas['date_add']) . "  <br/> " . htmlspecialchars($datas['post']) . '</p>';
+                echo '
+                <div id="actor-bot-coms">
+                    <div class="com">
+                        <p>
+                            <b>' . 
+                            htmlspecialchars($datas['username']) . 
+                            " <br/> " . 
+                            '</b> ' . 
+                            htmlspecialchars($datas['date_add']) . 
+                            "  <br/> " . 
+                            htmlspecialchars($datas['post']) . 
+                        '</p>
+                    </div>
+                </div>';
             }
-
             $reponse->closeCursor();
             ?>
-
-
-            <div id="actor-bot-coms">
-                <div class="com">
-                    Prénom<br/>
-                    Date<br/>
-                    Texte 
-                </div>
-                <div class="com">
-                    Prénom<br/>
-                    Date<br/>
-                    Texte 
-                </div>
-                <div class="com">
-                    Prénom<br/>
-                    Date<br/>
-                    Texte 
-                </div>
-            </div>
         </div>
         <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>

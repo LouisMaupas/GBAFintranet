@@ -21,7 +21,7 @@ echo 'Session : ' . $_SESSION['username'];
                 <span class="title-one">Se connecter</span>
                 <form method="POST" action="../php/transition.php" class="form">
                     <p class="title-two">
-                        <label for="username">Identifiant (3 premieres lettres prénom + 3 noms)</label>
+                        <label for="username">Identifiant</label>
                         <br/>
                         <input type="text" name="username" id="username" required>
                         <br/>

@@ -3,8 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'];
-
 // Connexion à la BDD
 try
 {
@@ -57,17 +55,7 @@ die('Erreur lors de la connexion à la base de données');
                     Chaque salarié peut ainsi poster un commentaire et donner son avis.
                     </h2>
             </div>
-            <!--OUTIL DE TRI DES ACTEURS-->
-            <label for="actor-select">Trier par :</label>
-                <select name="actor" id="actor-select">
-                    <option value="">-- Veuillez choisir une option --</option>
-                    <option value="most-comment">Le plus de commentaires en premier</option>
-                    <option value="most-like">Le plus de likes en premier</option>
-                    <option value="less-comment">Le moins de commentaires en premier</option>
-                    <option value="less-like">Le moins de likes en premier</option>
-                    <option value="alphabetical">Par ordre alphabétique</option>
-                    <option value="alphabetical-reverse">Par ordre alphabétique inversé</option>
-                </select>
+
             <div id="home-list-actors">
 
                 <div class="home-actor">
