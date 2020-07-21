@@ -3,7 +3,7 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'];
+echo 'Session : ' . $_SESSION['username'] . $_SESSION['answer'];
 
 // Connexion à la BDD
 try
@@ -55,7 +55,7 @@ die('Erreur lors de la connexion à la base de données');
                 </div> <!-- PENSER A CHANGER LE NOM like-programs par un truc + parlatn + global-->
                 <div id="like-programs">
                     <!-- penser a rempalcer selon l'acteur voulu par href="newCom.php?actoris=3"  -->
-                    <a href="newCom.php?actoris=3" target="blank" id="add-comment-button"class="button" >
+                    <a href="newCom.php?actoris=3" target="_blank" id="add-comment-button"class="button" >
                         Nouveau commentaire
                     </a>
                     <div id="like-or-dislike">
