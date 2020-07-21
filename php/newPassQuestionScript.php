@@ -10,6 +10,7 @@ catch (Exception $e)
         die('Erreur lors de la connexion à la base de données');
 }
 
+echo $_SESSION['username'] . "pour la session" ; 
 //récvupération du answer du formalure
 $answerForm = $_POST['answer'];
 
@@ -19,7 +20,7 @@ $log = $bdd->prepare('SELECT * from account where username = :username');
 $log->execute(array('username' => $username));
 $result = $log->fetch();
 $answerBdd = $result['answer'];
-
+var_dump($answerBdd);
 // condition if answer_form = answer_bdd
 if ($answerForm === $answerBdd ) 
 {
@@ -39,10 +40,10 @@ if ($answerForm === $answerBdd )
                 <?php require '../html/header.php'; ?>              
                 <div>
                     <h1>Formulaire d'inscription</h1>
-                    <form method="POST" action="newPassQuestionScript.php">
+                    <form method="POST" action="newPassUpdate.php">
                         <p>
-                            <label for="password">Mot de passe</label>:<input type="password" name="password" id="password" /><br />
-                            <label for="password-confirm">Confirmer mot de passe</label>:<input type="password" name="password-confirm" id="password-confirm" /><br />
+                            <label for="password">Nouveau mot de passe</label>:<input type="password" name="password" id="password" /><br />
+                            <label for="password-confirm">Confirmez le nouveau mot de passe</label>:<input type="password" name="password-confirm" id="password-confirm" /><br />
                             <input type="submit" value="envoyer"/>
                         </p>
                     </form>  
@@ -51,19 +52,7 @@ if ($answerForm === $answerBdd )
             </div>
         </body>
         </html>
-            <?php
-        // MAJ du mot de passe
-        $password = $_POST['password']; 
-        $newPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        // MAJ du mdp
-        $insert = $bdd->prepare('UPDATE account SET
-        password = :password,     
-        WHERE username = :username');
-        $insert->execute(array(
-            'paswword' => $password,
-            'username' => $username));
-        // redirection login page 
+<?php        
 } 
 else
 {
