@@ -20,40 +20,56 @@ $log->execute(array('username' => $username));
 $result = $log->fetch();
 $answerBdd = $result['answer'];
 
-
 // condition if answer_form = answer_bdd
-if ($answerForm === $answerBdd ) {
+if ($answerForm === $answerBdd ) 
+{
     echo "ça match";
-        // genere nvx mdp aléatoire
-        function password() { // DEMANDER A l'USER de saisir son mdp puis update la bdd
-            // chaine de caractères
-            $password = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            // on mélange
-            $password = str_shuffle($password);
-            // on coupe à 10 caracteres
-            $password = substr($password,0,10);
-            // on retourne:
-            return $password;
-        }
-        $pass = password(); 
-        // hachage du nouveau pass
-        $newPassword = password_hash($pass, PASSWORD_DEFAULT);
-        // insertion de celui-ci dans la bdd
-        // sinon récupérer tout le profil et tout le réinser entierement sauf rempalcer le nouveau mdp
+        // formulaire pour nouveau mot de passe
+        ?>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../css/style.css">
+            <title>page acteur</title>
+        </head>
+        <body>
+            <div id="container">
+                <?php require '../html/header.php'; ?>              
+                <div>
+                    <h1>Formulaire d'inscription</h1>
+                    <form method="POST" action="newPassQuestionScript.php">
+                        <p>
+                            <label for="password">Mot de passe</label>:<input type="password" name="password" id="password" /><br />
+                            <label for="password-confirm">Confirmer mot de passe</label>:<input type="password" name="password-confirm" id="password-confirm" /><br />
+                            <input type="submit" value="envoyer"/>
+                        </p>
+                    </form>  
+                </div>
+                <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
+            </div>
+        </body>
+        </html>
+            <?php
+        // MAJ du mot de passe
+        $password = $_POST['password']; 
+        $newPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $del = $bdd->prepare('ALTER TABLE account DROP COLUMN password WHERE username = :username');
-        $del->bindValue(2, $_SESSION['username'], PDO::PARAM_STR);
-        $del->execute();
-        $insert = $bdd->prepare('INSERT INTO account(password) VALUES (:password) WHERE username = :username');
-        $insert->bindValue(1, $newPassword, PDO::PARAM_STR);
-        $insert->bindValue(2, $_SESSION['username'], PDO::PARAM_STR);
-        $insert->execute();
-    // recuperation du mail
-    // envoi par mail du nvx mdp
-    // redirection login page 
-}
-else {
-    echo "mauvaise réponse voici un lien pour la page home";
+        // MAJ du mdp
+        $insert = $bdd->prepare('UPDATE account SET
+        password = :password,     
+        WHERE username = :username');
+        $insert->execute(array(
+            'paswword' => $password,
+            'username' => $username));
+        // redirection login page 
+} 
+else
+{
+    echo "mauvaise réponse";
 }
 
 ?>
+
+

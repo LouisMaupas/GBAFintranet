@@ -1,7 +1,7 @@
 <?php session_start(); 
-if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
+if ((isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
 {
-    header ("Location: login.php");
+    header ("Location: home.php");
 }
 echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
 ?>
