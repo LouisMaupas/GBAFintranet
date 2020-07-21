@@ -22,12 +22,6 @@ color: black;
     font-size: 2em;
 }
 
-
-#user-name {
-    display: flex;
-    flex-direction: row;
-}
-
 #container {
     display: flex;
     flex-direction: column;
@@ -38,16 +32,7 @@ color: black;
     margin-right: auto;
 }
 
-#header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: solid;
-}
 
-.header-logo {
-    display: flex;
-}
 
 .button {
     cursor: pointer;
@@ -59,6 +44,40 @@ color: black;
     border-style: ridge;
     color:#3399ff; 
     background-color: brown; 
+}
+/* UNIQUEMENT HEADER */
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid;
+}
+
+#header-home-logo {
+    display: flex;
+}
+
+#header-profil{
+    display: flex;
+    flex-direction: column;
+}
+
+#user-name {
+    display: flex;
+
+}
+
+#user-name-logo {
+    display: flex;
+}
+
+#user-name-text {
+    display: flex;
+}
+
+#header-logout {
+    display: flex;
 }
 
 
@@ -236,6 +255,4 @@ color: black;
     margin-right: 1em;
 }
 
-
-/* UNIQUEMENT LOGOUT*/
 

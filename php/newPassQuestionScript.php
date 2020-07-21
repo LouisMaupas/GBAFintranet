@@ -9,8 +9,6 @@ catch (Exception $e)
 {
         die('Erreur lors de la connexion à la base de données');
 }
-
-echo $_SESSION['username'] . "pour la session" ; 
 //récvupération du answer du formalure
 $answerForm = $_POST['answer'];
 
@@ -20,11 +18,10 @@ $log = $bdd->prepare('SELECT * from account where username = :username');
 $log->execute(array('username' => $username));
 $result = $log->fetch();
 $answerBdd = $result['answer'];
-var_dump($answerBdd);
+
 // condition if answer_form = answer_bdd
 if ($answerForm === $answerBdd ) 
 {
-    echo "ça match";
         // formulaire pour nouveau mot de passe
         ?>
         <!DOCTYPE html>
@@ -56,7 +53,8 @@ if ($answerForm === $answerBdd )
 } 
 else
 {
-    echo "mauvaise réponse";
+    echo "Ce n'est pas la bonne réponse";
+    header('refresh: 5; url=../index.php');
 }
 
 ?>

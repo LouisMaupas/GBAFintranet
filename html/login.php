@@ -3,7 +3,6 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: home.php");
 }
-echo 'Session : ' . $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

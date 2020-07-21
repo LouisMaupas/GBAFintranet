@@ -12,7 +12,6 @@ catch (Exception $e)
 
 //récupeartion du answaire dans la bdd
 $username = $_SESSION['username'];
-echo "premier echo" . $username . "         ";
 
 // MAJ du mot de passe
 $password = $_POST['password']; 
@@ -26,8 +25,9 @@ $insert->execute(array(
 'password' => $newPassword,
 'username' => $username));
 
+echo "votre mot de passe a bien été changé, vous allez être redirigé à l'accueil dans quelques secondes ...";
+header('refresh: 5; url=../index.php');
 
-echo "2eme echo" . $username . "       " . $password . "       " . $newPassword;
 
 
 ?>
