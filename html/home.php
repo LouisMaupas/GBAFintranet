@@ -12,10 +12,6 @@ catch (Exception $e)
 {
 die('Erreur lors de la connexion à la base de données');
 }
-// on pourrait le remplacer par : $idActor = 3; ??
-//$pdoStat = $bdd->prepare("SELECT id_actor FROM actor WHERE id_actor=3");
-//$executeIsOk = $pdoStat->execute();
-//$actor = $pdoStat->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">

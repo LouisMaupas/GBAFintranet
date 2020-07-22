@@ -85,27 +85,30 @@ die('Erreur lors de la connexion à la base de données');
             WHERE id_actor = 3 
             ORDER BY date_add DESC 
             LIMIT 0, 10') or die(print_r($bdd->errorInfo()));
-            
+                       
             // Affichage message 
-            while ($datas = $reponse->fetch())
-            {
-                echo '
-                <div id="actor-bot-coms">
-                    <div class="com">
-                        <p>
-                            <b>' . 
-                            htmlspecialchars($datas['username']) . 
-                            " <br/> " . 
-                            '</b> ' . 
-                            htmlspecialchars($datas['date_add']) . 
-                            "  <br/> " . 
-                            htmlspecialchars($datas['post']) . 
-                        '</p>
-                    </div>
-                </div>';
-            }
-            $reponse->closeCursor();
-            ?>
+
+            ?> 
+            <div id="actor-bot-coms">
+                <?php          
+                while ($datas = $reponse->fetch())
+                {
+                    echo '
+                        <div class="com">
+                            <p>
+                                <b>' . 
+                                htmlspecialchars($datas['username']) . 
+                                "</b>" . 
+                                '<br/>' . 
+                                htmlspecialchars($datas['date_add']) . 
+                                "<br/>" . 
+                                htmlspecialchars($datas['post']) . 
+                            '</p>
+                        </div>';
+                }
+                $reponse->closeCursor();
+                ?>
+            </div>
         </div>
         <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>

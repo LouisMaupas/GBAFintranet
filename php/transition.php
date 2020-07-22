@@ -18,7 +18,7 @@ catch (Exception $e)
 }
 
 // Récupération de l'utilisateur
-$req = $bdd->prepare('SELECT id_user, password, answer FROM account WHERE username = :username');
+$req = $bdd->prepare('SELECT id_user, password, answer, fname, lname FROM account WHERE username = :username');
 $req->execute(array(
     'username' => $username
 ));
@@ -48,6 +48,8 @@ else
             $_SESSION['id_user'] = $result['id_user'];
             $_SESSION['username'] = $username;
             $_SESSION['answer'] = $result['answer'];
+            $_SESSION['lname'] = $result['lname'];
+            $_SESSION['fname'] = $result['fname'];
             header('Location: ../html/home.php');
             exit;
         }

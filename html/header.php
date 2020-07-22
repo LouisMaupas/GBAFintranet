@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <title>page acteur</title>
-</head>
-<body>
-
     <header id="header">
 
         <div id="header-home-logo">
@@ -27,23 +17,13 @@
                 </div>
                 <div id="user-name-text">  
                     <a href="profil.php">
-                        Mon profil : 
-                        <?php echo "php nom prenom" ?>
+                        <?php echo $_SESSION['lname'] . " " . $_SESSION['fname'] ?>                   
+                    </a>
+                    <br/>
+                    <a href="logout.php">
+                        Se déconnecter
                     </a>
                 </div>
-                <div id="header-logout">
-                    <a href="logout.php">Se déconnecter</a>
-                </div>
-            </div>    
+            </div>
         </div>          
-
     </header>
-
-
-
-
-
-
-
-</body>
-</html>

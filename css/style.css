@@ -22,18 +22,6 @@ color: black;
     font-size: 2em;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-
 .button {
     cursor: pointer;
     border-radius: 5px;
@@ -45,6 +33,17 @@ color: black;
     color:#3399ff; 
     background-color: brown; 
 }
+
+#container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* UNIQUEMENT HEADER */
 
 #header {
@@ -61,6 +60,8 @@ color: black;
 #header-profil{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #user-name {
@@ -68,16 +69,12 @@ color: black;
 
 }
 
-#user-name-logo {
-    display: flex;
-}
-
 #user-name-text {
     display: flex;
-}
-
-#header-logout {
-    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    flex-direction: column;
+    align-self: center;
 }
 
 
