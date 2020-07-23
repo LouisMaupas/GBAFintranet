@@ -1,11 +1,9 @@
 <?php
 session_start(); 
-
 // Stockage de l'ID et du MDP depuis login.php
 $username = $_POST['username'];
 $password = $_POST['password-login'];
 
-/*echo $identifiant + $motDePasse; */
 
 // Connexion à la BDD
 try

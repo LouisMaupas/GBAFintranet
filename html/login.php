@@ -20,7 +20,7 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>
                 <form method="POST" action="../php/transition.php" class="form">
-                    <p class="title-two">
+                    <p>
                         <label for="username">Identifiant</label>
                         <br/>
                         <input type="text" name="username" id="username" required>
