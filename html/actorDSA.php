@@ -50,7 +50,7 @@ die('Erreur lors de la connexion à la base de données');
                     $result = $count->fetchColumn();
                     echo ($result) ;        
                     ?>
-                     COMMENTAIRES
+                     COMMENTAIRE(S)
                 </div> <!-- PENSER A CHANGER LE NOM like-programs par un truc + parlatn + global-->
                 <div id="like-programs">
                     <!-- penser a rempalcer selon l'acteur voulu par href="newCom.php?actoris=3"  -->
@@ -95,7 +95,7 @@ die('Erreur lors de la connexion à la base de données');
                 {
                     echo '
                         <div class="com">
-                            <p>
+                            <p class="p-com">
                                 <b>' . 
                                 htmlspecialchars($datas['username']) . 
                                 "</b>" . 

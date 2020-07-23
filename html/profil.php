@@ -29,7 +29,7 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                         <br/>
                         <input type="text" name="first-name" id="first-name">
                         <br/>
-                        <label for="username">Nom utilisateur (3 premières lettre prénom + 3 premières lettres du nom de famille)</label>
+                        <label for="username">Nom d'utilisateur</label>
                         <br/>
                         <input type="text" id="username" name="username">
                         <br/>
@@ -43,7 +43,12 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                         <br/>
                         <label for="password">Mot de passe </label>
                         <br/>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" value="
+                        <?php 
+                        if (!empty($_SESSION['notSamePassMessage'])){
+                            echo $_SESSION['notSamePassMessage'];   
+                        }
+                         ?>">
                         <br/>
                         <label for="password-confirm">Confirmez le mot de passe </label>
                         <br/>
@@ -61,34 +66,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                     </p>
                 </form>
             </div>            
-                <div class="forms form-activites">
-                    <div id="form-activites-title">
-                        <span class="title-one">Mes activités</span>
-                    </div>
-                    <div id="form-activites-content">
-                        <div id="profile-main-activites-comments" class="forms">
-                            Mes commentaires
-                        </div>
-                        <div class="profile-main-activites forms">
-                            Mes likes
-                        </div>
-                    </div>
-                </div>
-            <div class="forms form-picture">
-            <span class="title-one">Photo de profil</span>
-                <form method="POST" action="" class="">
-                    <p>La photo de profil doit être <br/> au format .jpeg et inférieur à 1mo</p>
-                    <p class="title-two">
-                        <img src="../ressources/photo-profil.png" alt="votre photo de profil">
-                        <br/>
-                        <label for="id">Sélectionnez votre photo de profil</label>
-                        <br/><br/>
-                        <input type="file" name="photo-profil" id="id">
-                        <br/>
-                        <input type="submit" value="Envoyer la photo" class="form-button-send">
-                    </p>
-                </form>
-            </div>
         </div>  
         <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>    

@@ -15,8 +15,6 @@ try
         die('Erreur lors de la connexion à la base de données');
 }
 
-echo "fname  ". $_POST['first-name'] . "lanme " . $_POST['last-name']. "user " . $_POST['username']. "mail" .  $_POST['mail'] . "question" . $_POST['question-secret'] . "answer " . $_POST['answer-secret'] . $_POST['password'];
-
 if(!isset($_POST['submit'])){
 
 // récupération de l'id user
@@ -27,7 +25,17 @@ $lname = $_POST['last-name'];
 $username = $_POST['username'];
 $mail = $_POST['mail'];
 $question = $_POST['question-secret'];
-$answer = $_POST['answer-secret']; 
+$answer = $_POST['answer-secret'];
+
+//verification mot de passe
+$pass = $_POST["password"];
+$passConfirm = $_POST["password-confirm"];
+if($pass != $passConfirm) {
+    $_SESSION['notSamePassMessage'] = 'Les mots de passe ne sont pas identiques.';
+    header('profil.php');
+}
+
+
 //hachage du mdp
 $password = $_POST['password'];
 $password = password_hash($password, PASSWORD_DEFAULT); 

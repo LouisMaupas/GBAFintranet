@@ -3,8 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
-
 // Connexion à la BDD
 try
 {

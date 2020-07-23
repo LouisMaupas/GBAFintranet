@@ -27,7 +27,7 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                         <br/>
                         <label for="password-login">Mot de passe </label>
                         <br/>
-                        <input type="password" name="password-login" id="password-login" required>
+                        <input type="password" name="password-login" id="password-login" >
                         <br/>
                         <input type="checkbox" name="stay-connected" id="stay-connected" /> <label for="stay-connected">Rester connecté</label><br /> 
                         <input type="submit" value="Envoyer" class="form-button-send">
