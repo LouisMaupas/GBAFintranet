@@ -85,7 +85,7 @@ color: black;
 }
 
 
-/* UNIQUEMENT INDEX*/
+/* UNIQUEMENT HOME*/
 
 #index-main {
     display: flex;
@@ -138,6 +138,7 @@ color: black;
 }
 
 .home-actor {
+    overflow: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -147,6 +148,7 @@ color: black;
 
 .home-actor-logo-plus-text {
     display: flex;
+    flex-direction: column;
 
 }
 
@@ -159,12 +161,13 @@ color: black;
 }
 
 .home-actor-button {
+    overflow: auto;
     display:block;
     text-align: center;
     background-color: #EFEFEF;
     border-color: #767676;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: 2spx;
     display: flex;
     align-self: flex-end;
     margin-bottom: 1em;
@@ -172,8 +175,10 @@ color: black;
     cursor: pointer;
     border-radius: 5px;
     padding-left: 1px;
-    block-size: 35px;
+    block-size: 50px;
 }
+
+
 
 /* UNIQUEMENT ACTOR */ 
 

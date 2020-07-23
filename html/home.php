@@ -51,7 +51,7 @@ die('Erreur lors de la connexion à la base de données');
                     Afin de renseigner au mieux les clients, voici une base de données pour chercher des informations de
                     manière fiable et rapide ou pour donner son avis sur les partenaires et acteurs, produits et services du groupe.                   
                     Chaque salarié peut ainsi poster un commentaire et donner son avis.
-                    </h2>
+                </h2>
             </div>
 
             <div id="home-list-actors">
@@ -90,9 +90,6 @@ die('Erreur lors de la connexion à la base de données');
                         </a>
                     </div>
                 </div>
-
-
-
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-dsa-france.png" alt="logo DSAFrance"/>

@@ -39,7 +39,7 @@ die('Erreur lors de la connexion à la base de données');
                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
                 Notre philosophie : s’adapter à chaque entreprise.
                 Nous les accompagnons pour voir plus grand et plus loin et proposons des solutions de financement adaptées à chaque étape de la vie des entreprises
-                </p>
+            </p>
         </div>
         <div id="actor-bot">
             <div id="actor-bot-info">
