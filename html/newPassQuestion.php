@@ -14,12 +14,12 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 </head>
 <body>
     <div id="container">
-    <?php require 'header.php'; ?>
+    <?php require 'headerUnlock.php'; ?>
         <div id="index-main">
             <div class="forms form-login">
             <span class="title-one">
                 <?php echo "Bonjour " . $_SESSION['username'] ?>
-                Repondez à la question secrete pour recevoir votre nouveau mot de passe par mail
+                veuillez répondre à la question secrète afin de vérfier votre identité
             </span>
             <?php 
             echo "La question est : " . $_SESSION['question'] ?>

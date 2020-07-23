@@ -23,44 +23,31 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                         <br/>
                         <label for="last-name">Nom</label>
                         <br/>
-                        <input type="text" id="last-name" name="last-name">
+                        <input type="text" id="last-name" name="last-name" required>
                         <br/>
                         <label for="first-name">Prénom</label>
                         <br/>
-                        <input type="text" name="first-name" id="first-name">
+                        <input type="text" name="first-name" id="first-name" required>
                         <br/>
                         <label for="username">Nom d'utilisateur</label>
                         <br/>
-                        <input type="text" id="username" name="username">
+                        <input type="text" id="username" name="username" required>
                         <br/>
                         <label for="mail">E-mail</label>
                         <br/>
-                        <input type="email" id="mail" name="mail"/>
-                        <br/>
-                        <label for="mail">Confirmez votre e-mail</label>
-                        <br/>
-                        <input type="email" name="mail-confirm" id="mail-confirm"/>
-                        <br/>
+                        <input type="email" id="mail" name="mail" required>
+                        <br/>                      
                         <label for="password">Mot de passe </label>
                         <br/>
-                        <input type="password" name="password" id="password" value="
-                        <?php 
-                        if (!empty($_SESSION['notSamePassMessage'])){
-                            echo $_SESSION['notSamePassMessage'];   
-                        }
-                         ?>">
-                        <br/>
-                        <label for="password-confirm">Confirmez le mot de passe </label>
-                        <br/>
-                        <input type="password" name="password-confirm" id="password-confirm">
+                        <input type="password" name="password" id="password" required>
                         <br/>
                         <label for="question-secret">Question secrète</label>
                         <br/>
-                        <input type="text" name="question-secret" id="question-secret">
+                        <input type="text" name="question-secret" id="question-secret" required>
                         <br/>
                         <label for="answer-secret">Réponse secrète</label>
                         <br/>
-                        <input type="text" name="answer-secret" id="answer-secret">
+                        <input type="text" name="answer-secret" id="answer-secret" required>
                         <br/>
                         <input type="submit" value="Envoyer" class="form-button-send">
                     </p>

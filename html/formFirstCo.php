@@ -1,6 +1,8 @@
 <?php session_start(); 
-echo 'Session : ' . $_SESSION['username'];
-// si ses infos sont déjà en bdd rediriger vers home 
+if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
+{
+    header ("Location: login.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,28 +21,19 @@ echo 'Session : ' . $_SESSION['username'];
             <p>
                 Comme c'est votre première connexion veuillez <span class="text-red">renseigner les informations</span> ci-dessous.
             </p>
-            <form method="POST" action="C:\wamp64\www\projet3\html\home.php" class="form">
+            <form method="POST" action="C:\wamp64\www\projet3\php\updateProfil.php" class="form">
                 <p class="title-two">
-                    <label for="id-first-co">Identifiant</label>
+                    <label for="mail">e-mail</label>
                     <br />
-                    <input type="text" id="id-first-co">
+                    <input type="mail" id="mail">
                     <br />
-                    <label for="lname-first-co">Nom</label>
+                    <label for="question">Choisissez une question secrète qui vous sera demmandé en cas d'oubli de votre mot de passe</label>
                     <br />
-                    <input type="text" id="lname-first-co">
+                    <input type="text" id="question">
                     <br />
-                    <label for="fname-first-co">Prénom</label>
+                    <label for="answer">Choisissez la réponse à votre question secrète </label>
                     <br />
-                    <input type="text" name="first-name" id="fname-first-co">
-                    <br />
-                    <label for="password-subscribe">Mot de passe </label>
-                    <br />
-                    <input type="password" name="password" id="password-subscribe">
-                    <br />
-                    <label for="password-subscribe-confirm">Confirmez le mot de passe </label>
-                    <br />
-                    <input type="password" name="password-two" id="password-subscribe-confirm">
-                    <br />
+                    <input type="text" name="answer" id="answer">
                     <input type="submit" value="Envoyer" class="form-button-send">
                 </p>
             </form>

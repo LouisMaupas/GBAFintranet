@@ -3,7 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'] . $_SESSION['id_user'];
 
 // Connexion à la BDD
 try
@@ -26,15 +25,6 @@ $username = $_POST['username'];
 $mail = $_POST['mail'];
 $question = $_POST['question-secret'];
 $answer = $_POST['answer-secret'];
-
-//verification mot de passe
-$pass = $_POST["password"];
-$passConfirm = $_POST["password-confirm"];
-if($pass != $passConfirm) {
-    $_SESSION['notSamePassMessage'] = 'Les mots de passe ne sont pas identiques.';
-    header('profil.php');
-}
-
 
 //hachage du mdp
 $password = $_POST['password'];
@@ -59,8 +49,8 @@ $password = password_hash($password, PASSWORD_DEFAULT);
         'password' => $password,
         'question' => $question,
         'answer' => $answer));
-var_dump($req);
-    echo ' ça marche';
+        header ("Location: ../html/login.php");
 } else {
-    echo "ça ne marche pas";
+    echo "erreur critique";
 }
+?>

@@ -15,7 +15,7 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 </head>
 <body>
     <div id="container">
-    <?php require 'header.php'; ?>
+    <?php require 'headerUnlock.php'; ?>
         <div id="index-main">
             <div class="forms form-login">
                 <span class="title-one">Se connecter</span>

@@ -68,10 +68,9 @@ die('Erreur lors de la connexion à la base de données');
                         $dislikes = $dislikes->rowCount();
                         ?>
                         <span id="number-of-likes"> (<?= $likes ?>) </span>
-                        <!-- penser a rempalcer selon l'acteur voulu -->
-                        <a href="../php/like.php?vote=1&actoris=3"> <img src="#" alt="image like"/></a>
+                        <a href="../php/like.php?vote=1&actoris=3"> <img src="../ressources/like.png" alt="image like"/></a>
                         <span id="number-of-likes"> (<?= $dislikes ?>)  </span>
-                        <a href="../php/like.php?vote=2&actoris=3"> <img src="#" alt="image dislike"/></a>
+                        <a href="../php/like.php?vote=2&actoris=3"> <img src="../ressources/dislike.png" alt="image dislike"/></a>
                     </div>
                 </div>
             </div>

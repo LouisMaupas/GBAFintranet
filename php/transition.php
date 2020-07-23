@@ -39,6 +39,7 @@ else
     if($isPasswordCorrect)
     {
         if(empty($verifyAnswerNull)) {
+            $_SESSION['id_user'] = $result['id_user'];
             header('Location: ../html/formFirstCo.php');
             exit;
         }

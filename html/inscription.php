@@ -13,6 +13,7 @@
             <label for="id_user">id_user</label>:<input type="text" name="id_user" id="id_user" /><br />
             <label for="fname">fname</label>:<input type="text" name="fname" id="fname" /><br />
             <label for="lname">lname</label>:<input type="text" name="lname" id="lname" /><br />
+            <label for="mail">mail</label>:<input type="mail" name="mail" id="mail" /><br />
             <label for="username">username</label>:<input type="text" name="username" id="username" /><br />
             <label for="password">password</label>:<input type="password" name="password" id="password" /><br />
             <label for="question">question</label>:<input type="text" name="question" id="question" /><br />

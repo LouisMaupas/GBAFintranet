@@ -34,13 +34,13 @@ if ($answerForm === $answerBdd )
         </head>
         <body>
             <div id="container">
-                <?php require '../html/header.php'; ?>              
+                <?php require '../html/headerUnlock.php'; ?>              
                 <div>
                     <h1>Formulaire d'inscription</h1>
                     <form method="POST" action="newPassUpdate.php">
                         <p>
-                            <label for="password">Nouveau mot de passe</label>:<input type="password" name="password" id="password" /><br />
-                            <label for="password-confirm">Confirmez le nouveau mot de passe</label>:<input type="password" name="password-confirm" id="password-confirm" /><br />
+                            <label for="password">Nouveau mot de passe</label>:<input type="password" name="password" id="password" />
+                            <br/>
                             <input type="submit" value="envoyer"/>
                         </p>
                     </form>  
@@ -53,7 +53,7 @@ if ($answerForm === $answerBdd )
 } 
 else
 {
-    echo "Ce n'est pas la bonne réponse";
+    echo "Mauvais identifiant ou mot de passe";
     header('refresh: 5; url=../index.php');
 }
 

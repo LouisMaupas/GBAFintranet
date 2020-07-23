@@ -25,7 +25,7 @@ $insert->execute(array(
 'password' => $newPassword,
 'username' => $username));
 
-echo "votre mot de passe a bien été changé, vous allez être redirigé à l'accueil dans quelques secondes ...";
+echo "votre mot de passe a bien été changé, vous allez être redirigé vers l'accueil dans quelques secondes ...";
 header('refresh: 5; url=../index.php');
 
 
