@@ -18,7 +18,7 @@
                 </div>
                 <div id="user-name-text">  
                     <a href="profil.php">
-                        <?php echo $_SESSION['lname'] . " " . $_SESSION['fname'] ?>                   
+                        Profil                  
                     </a>
                     <br/>
                     <a href="logout.php">

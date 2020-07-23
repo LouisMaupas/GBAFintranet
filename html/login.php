@@ -10,7 +10,9 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" media="all and (max-width: 650px)" href="../css/stylePhone.css" />
+    <link rel="stylesheet" media="all and (min-width: 651px) and (max-width: 1223px)" href="../css/stylePad.css" />
+    <link rel="stylesheet" media="all and (min-width: 1224px)" type="text/css" href="../css/style.css">
     <title>connexion</title>
 </head>
 <body>
