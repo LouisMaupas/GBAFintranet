@@ -45,6 +45,7 @@ die('Erreur lors de la connexion à la base de données');
                 ../ressources/illustration360.jpg 360"
                 sizes="(max-width: 320px) 300px,
                     (max-width: 650px) 360px,
+                    (max-width: 1000px) 768px,
                         1000px"
                 src="../ressources/illustration.jpg" alt="illustration de GBAF" />
             </div>
@@ -74,9 +75,11 @@ die('Erreur lors de la connexion à la base de données');
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                    <a href="actorDSA.php" target="blank" >
-                            Lire la suite
-                        </a>
+                        <div id="read-more">
+                            <a href="actorDSA.php" target="blank" >
+                                Lire la suite
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="home-actor">

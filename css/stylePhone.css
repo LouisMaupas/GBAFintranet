@@ -139,7 +139,7 @@ color: black;
 .home-actor {
     overflow: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     border-style: solid;
     margin: 1em;
@@ -156,25 +156,25 @@ color: black;
 }
 
 .home-actor-text {
+    padding: 1em;
     margin-bottom: 1em;
 }
 
 .home-actor-button {
-    overflow: auto;
-    display:block;
+    text-overflow: ellipsis;
+    padding-top: 50px;
+    display: flex;
+    align-self: flex-end;
     text-align: center;
     background-color: #EFEFEF;
     border-color: #767676;
     border-style: solid;
-    border-radius: 2spx;
-    display: flex;
-    align-self: flex-end;
-    margin-bottom: 1em;
+    border-radius: 2px;
     margin-right: 2%;
     cursor: pointer;
     border-radius: 5px;
-    padding-left: 1px;
     block-size: 50px;
+    padding: 0em;
 }
 
 

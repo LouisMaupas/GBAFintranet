@@ -2,6 +2,14 @@ ul, li {
     list-style: none;
 }
 
+h2 {
+    font-weight : normal;
+}
+
+h3 {
+    font-weight : normal;
+}
+
 a:link
 {
 text-decoration:none;
@@ -143,6 +151,7 @@ color: black;
 
 .home-actor-logo-plus-text {
     display: flex;
+    word-wrap: break-word;
 
 }
 
@@ -155,6 +164,7 @@ color: black;
 }
 
 .home-actor-button {
+    text-overflow: ellipsis;
     overflow: auto;
     display:block;
     text-align: center;

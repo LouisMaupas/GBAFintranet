@@ -154,10 +154,11 @@ color: black;
 }
 
 .home-actor-text {
-    margin-bottom: 1em;
+     margin-bottom: 1em;
 }
 
 .home-actor-button {
+    text-overflow: ellipsis;
     overflow: auto;
     display:block;
     text-align: center;
