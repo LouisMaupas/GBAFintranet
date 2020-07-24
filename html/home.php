@@ -21,7 +21,7 @@ die('Erreur lors de la connexion à la base de données');
     <link rel="stylesheet" media="all and (max-width: 650px)" href="../css/stylePhone.css" />
     <link rel="stylesheet" media="all and (min-width: 651px) and (max-width: 1223px)" href="../css/stylePad.css" />
     <link rel="stylesheet" media="all and (min-width: 1224px)" type="text/css" href="../css/style.css">
-    <title>Accueil</title>
+    <title>Accueil GBAF</title>
 </head>
 <body>
     <div id="container">
@@ -75,7 +75,7 @@ die('Erreur lors de la connexion à la base de données');
                     </div>
                     <div class="home-actor-button ">
                         <div id="read-more">
-                            <a href="actorDSA.php" target="blank" >
+                            <a href="actorForm.php" target="blank" >
                                 Lire la suite
                             </a>
                         </div>
@@ -93,7 +93,7 @@ die('Erreur lors de la connexion à la base de données');
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorDSA.php" target="blank" >
+                        <a href="actorProtect.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>
@@ -127,7 +127,7 @@ die('Erreur lors de la connexion à la base de données');
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorDSA.php" target="blank" >
+                        <a href="actorCDE.php" target="blank" >
                             Lire la suite
                         </a>
                     </div>

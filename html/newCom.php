@@ -22,7 +22,7 @@ die('Erreur lors de la connexion à la base de données');
     <link rel="stylesheet" media="all and (max-width: 650px)" href="../css/stylePhone.css" />
     <link rel="stylesheet" media="all and (min-width: 651px) and (max-width: 1223px)" href="../css/stylePad.css" />
     <link rel="stylesheet" media="all and (min-width: 1224px)" type="text/css" href="../css/style.css">
-    <title>Ecrivez votre commentaire</title>
+    <title>Nouveau commentaire</title>
 </head>
 <body>
     <div id="container">

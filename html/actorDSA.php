@@ -3,7 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-
 // Connexion à la BDD
 try
 {
@@ -22,7 +21,7 @@ die('Erreur lors de la connexion à la base de données');
     <link rel="stylesheet" media="all and (max-width: 650px)" href="../css/stylePhone.css" />
     <link rel="stylesheet" media="all and (min-width: 651px) and (max-width: 1223px)" href="../css/stylePad.css" />
     <link rel="stylesheet" media="all and (min-width: 1224px)" type="text/css" href="../css/style.css">
-    <title>page acteur</title>
+    <title>DSA France</title>
 </head>
 <body>
     <div id="container">
@@ -33,7 +32,7 @@ die('Erreur lors de la connexion à la base de données');
                     <img src="../ressources/logo-dsa-france.png" alt="Logo de GBAF"/>
                 </p>
             </div>
-            <h2>Titre H2 : DSA FRANCE </h2>
+            <h2>DSA FRANCE </h2>
             <a href="http://www.dsafrance.fr">Vers DSA France</a>
             <p> Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales.
                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
@@ -45,7 +44,7 @@ die('Erreur lors de la connexion à la base de données');
             <div id="actor-bot-info">
                 <div id="comments-counter">
                     <?php 
-                    // récupère le nombre d'apparition de l'id actor3
+                    // récupère le nombre d'apparition de l'id
                     $count = $bdd->query('SELECT COUNT(id_actor) FROM post WHERE id_actor = 3'); 
                     // Puis on l'affiche
                     $count->execute();
@@ -53,14 +52,12 @@ die('Erreur lors de la connexion à la base de données');
                     echo ($result) ;        
                     ?>
                      COMMENTAIRE(S)
-                </div> <!-- PENSER A CHANGER LE NOM like-programs par un truc + parlatn + global-->
+                </div>
                 <div id="like-programs">
-                    <!-- penser a rempalcer selon l'acteur voulu par href="newCom.php?actoris=3"  -->
                     <a href="newCom.php?actoris=3" target="_blank" id="add-comment-button" class="button" >                   
                         Nouveau commentaire
                     </a>
                     <div id="like-or-dislike">
-                        <!-- penser a changer l'ID actor -->
                         <?php 
                         $likes = $bdd->prepare('SELECT id_vote FROM vote WHERE id_actor = 3 AND choice = 1');
                         $likes->execute();
@@ -76,7 +73,6 @@ die('Erreur lors de la connexion à la base de données');
                     </div>
                 </div>
             </div>
-
             <?php
             // Récupération des derniers messages dans la BDD
             $reponse = $bdd->query('SELECT post.id_user, post.date_add, post.post, account.username 
@@ -85,10 +81,8 @@ die('Erreur lors de la connexion à la base de données');
             ON post.id_user = account.id_user
             WHERE id_actor = 3 
             ORDER BY date_add DESC 
-            LIMIT 0, 10') or die(print_r($bdd->errorInfo()));
-                       
+            LIMIT 0, 10') or die(print_r($bdd->errorInfo()));                      
             // Affichage message 
-
             ?> 
             <div id="actor-bot-coms">
                 <?php          

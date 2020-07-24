@@ -34,7 +34,7 @@ if(isset($_POST['post'],$_GET['actoris'])) {
      $insert->bindValue(3, $post, PDO::PARAM_STR);   
      $insert->execute();
            }
-       header('Location: ../html/actorDSA.php');
+       header('Location: ../html/home.php');
        } else {
            echo "erreur";
         }

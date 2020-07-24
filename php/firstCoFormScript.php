@@ -19,7 +19,6 @@ $question = $_POST['question-secret'];
 $answer = $_POST['answer-secret'];
 
 //MAJ BDD
-
     $req = $bdd->prepare('UPDATE account SET 
     mail = :mail, 
     question = :question, 
