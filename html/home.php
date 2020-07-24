@@ -26,7 +26,7 @@ die('Erreur lors de la connexion à la base de données');
 <body>
     <div id="container">
     <?php require 'C:\wamp64\www\projet3\html\header.php'; ?>
-        <!-- MAIN 1/2-->
+
         <div id="home-presentation">
             <div>
                 <h1>
@@ -50,8 +50,7 @@ die('Erreur lors de la connexion à la base de données');
                 src="../ressources/illustration.jpg" alt="illustration de GBAF" />
             </div>
         </div>
-        <!-- MAIN 1/2-->
-        <!-- MAIN 2/2-->
+
         <section id="home-actors">
             <div>
                 <h2>Les produits et services bancaires sont nombreux et très variés.
@@ -135,7 +134,7 @@ die('Erreur lors de la connexion à la base de données');
                 </div> 
              </div>     
         </section>
-        <!-- MAIN 2/2-->
+
         <?php require 'C:\wamp64\www\projet3\html\footer.php'; ?>
     </div>
 </body>

@@ -28,7 +28,6 @@ if(isset($_POST['post'],$_GET['actoris'])) {
                 'id_actor' => $id_actor,
                 'post' => $post));
            } elseif($check == 0) {
-            // prevenir usager qu'il a deja laissé un com
      $insert = $objetPdo->prepare('INSERT INTO post (id_user, id_actor, date_add, post) VALUES (?, ?, NOW() , ?)');
      $insert->bindValue(1, $id_user, PDO::PARAM_INT);
      $insert->bindValue(2, $id_actor, PDO::PARAM_INT);

@@ -8,7 +8,7 @@ echo 'Session : ' . $_SESSION['username'] . " LE ID de l'user est "  . $_SESSION
 //connexion à la BDD
 $bdd = new PDO('mysql:hostname=localhost;dbname=projettroisbdd','root','');
 
-//Recuperation du session id pour limiter le nombre de like par pers => plus utilisé a supr
+//Recuperation du session id pour limiter le nombre de like par pers
 $sessionId = $_SESSION['id_user'];
 
 //vote systm

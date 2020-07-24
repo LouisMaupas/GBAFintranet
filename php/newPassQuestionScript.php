@@ -9,17 +9,17 @@ catch (Exception $e)
 {
         die('Erreur lors de la connexion à la base de données');
 }
-//récvupération du answer du formalure
+//récupération du answer du formalure
 $answerForm = $_POST['answer'];
 
-//récupeartion du answaire dans la bdd
+//récupeartion du answer dans la bdd
 $username = $_SESSION['username'];
 $log = $bdd->prepare('SELECT * from account where username = :username');
 $log->execute(array('username' => $username));
 $result = $log->fetch();
 $answerBdd = $result['answer'];
 
-// condition if answer_form = answer_bdd
+// on compare
 if ($answerForm === $answerBdd ) 
 {
         // formulaire pour nouveau mot de passe

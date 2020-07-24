@@ -10,10 +10,10 @@ catch (Exception $e)
         die('Erreur lors de la connexion à la base de données');
 }
 
-//récupeartion du answaire dans la bdd
+//récuperation du answer dans la bdd
 $username = $_SESSION['username'];
 
-// MAJ du mot de passe
+// recup du mot de passe
 $password = $_POST['password']; 
 $newPassword = password_hash($password, PASSWORD_DEFAULT);
 

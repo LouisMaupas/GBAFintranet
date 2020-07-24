@@ -24,7 +24,7 @@ $result = $req->fetch();
 // Comparaison du pass envoyé via le formulaire avec la base
 $isPasswordCorrect = password_verify($password, $result['password']);
 
-//Voyons si l'user a deja un profil COMPLET enregistré dans la BDD, pour ça on vérifie si reponse secrete associé à l'user posté est pas vide
+//Verification que l'user ait deja un profil COMPLET avec la réponse secrete
 $verifyAnswerNull = $result['answer'];
 
 

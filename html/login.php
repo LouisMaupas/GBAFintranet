@@ -1,5 +1,5 @@
 <?php session_start(); 
-//ini_set('display_errors', 'Off'); //PENSER A LE REACTIVER
+ini_set('display_errors', 'Off');
 if ((isset($_SESSION['answer']) && $_SESSION['answer'] != '')) 
 {
     header ("Location: home.php");
