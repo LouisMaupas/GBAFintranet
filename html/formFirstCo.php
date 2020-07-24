@@ -22,7 +22,7 @@
                 <p class="title-two">
                     <label for="mail">E-mail</label>
                     <br />
-                    <input type="mail" id="mail" name="mail">
+                    <input type="email" id="mail" name="mail">
                     <br />
                     <label for="question-secret">Choisissez une question secrète qui vous sera demmandée en cas d'oubli de votre mot de passe</label>
                     <br />
@@ -30,7 +30,7 @@
                     <br />
                     <label for="answer-secret">Choisissez la réponse à votre question secrète </label>
                     <br />
-                    <input type="password" name="answer-secret" id="answer-secret" name="answer-secret" required>
+                    <input type="password" name="answer-secret" id="answer-secret" required>
                     <br/>
                     <input type="submit" value="Envoyer" class="form-button-send">
                 </p>

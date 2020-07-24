@@ -42,7 +42,7 @@ die('Erreur lors de la connexion à la base de données');
             <div>
                 <img srcset="../ressources/illustration720.jpg 720w,
                 ../ressources/illustration320.jpg 320w,
-                ../ressources/illustration360.jpg 360"
+                ../ressources/illustration360.jpg 360w"
                 sizes="(max-width: 320px) 300px,
                     (max-width: 650px) 360px,
                     (max-width: 1000px) 768px,

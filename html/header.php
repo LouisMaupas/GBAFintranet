@@ -1,5 +1,4 @@
     <header id="header">
-
         <div id="header-home-logo">
             <p>
                 <img src="../ressources/logo-gbaf-reduit.png" alt="Logo de GBAF"/>
