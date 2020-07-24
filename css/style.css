@@ -234,6 +234,7 @@ color: black;
 /*UNIQUEMENT PROFIL */
 
 #profile-main {
+    width: auto;
     display: flex;
     justify-content: space-between;
     border-style: ridge;

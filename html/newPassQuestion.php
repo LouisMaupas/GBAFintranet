@@ -29,7 +29,7 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
                     <p class="title-two">
                         <label for="answer"></label>
                         <br/>
-                        <input type="text" name="answer" id="answer" required>
+                        <input type="password" name="answer" id="answer" required>
                         <input type="submit" value="Envoyer" class="form-button-send">
                     </p>                    
                 </form>            

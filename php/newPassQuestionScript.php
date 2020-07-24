@@ -41,8 +41,7 @@ if ($answerForm === $answerBdd )
                     <h1>Formulaire d'inscription</h1>
                     <form method="POST" action="newPassUpdate.php">
                         <p>
-                            <label for="password">Nouveau mot de passe</label>:<input type="password" name="password" id="password" />
-                            <br/>
+                            <label for="password"> Nouveau mot de passe </label> : <input type="password" name="password" id="password" />
                             <input type="submit" value="envoyer"/>
                         </p>
                     </form>  

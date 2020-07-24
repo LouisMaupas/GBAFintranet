@@ -18,7 +18,7 @@ session_destroy();
     <?php require 'C:\wamp64\www\projet3\html\headerUnlock.php'; ?>
     <div id="logout-confirm">
         <p>
-        Vous êtes bien déconnecté
+        Vous êtes bien déconnectés
         <?php header('refresh: 5; url=login.php') ?>
         </p>
     </div>

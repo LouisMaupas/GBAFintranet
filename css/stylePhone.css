@@ -35,7 +35,6 @@ color: black;
 }
 
 #container {
-    background-color: red;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -85,13 +84,13 @@ color: black;
 }
 
 
-/* UNIQUEMENT HOME*/
+/* UNIQUEMENT INDEX*/
 
 #index-main {
     display: flex;
     justify-content: space-between;
     border-style: ridge;
-    margin: 5em;
+    margin: 1em;
     padding-top: 3em;
     padding-bottom: 3em;
 }
@@ -190,6 +189,7 @@ color: black;
 
 #actor-bot-info {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-top: 1em;
 }
@@ -202,6 +202,8 @@ color: black;
 }
 
 #like-programs {
+    align-self: center;
+    flex-direction: column;
     display: flex;
     margin-right: 1em;
 }
@@ -213,6 +215,7 @@ color: black;
 }
 
 #like-or-dislike {
+
     display: flex;
     border-style: solid;
     padding: 1em;
@@ -239,10 +242,11 @@ color: black;
 /*UNIQUEMENT PROFIL */
 
 #profile-main {
+    width: auto;
     display: flex;
     justify-content: space-between;
     border-style: ridge;
-    margin: 5em;
+    margin: 1em;
     padding-top: 3em;
     padding-bottom: 3em;
 }

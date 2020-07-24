@@ -20,11 +20,11 @@
                 <br/>
             <form method="POST" action="../php/firstCoFormScript.php" class="form">
                 <p class="title-two">
-                    <label for="mail">e-mail</label>
+                    <label for="mail">E-mail</label>
                     <br />
                     <input type="mail" id="mail" name="mail">
                     <br />
-                    <label for="question-secret">Choisissez une question secrète qui vous sera demmandé en cas d'oubli de votre mot de passe</label>
+                    <label for="question-secret">Choisissez une question secrète qui vous sera demmandée en cas d'oubli de votre mot de passe</label>
                     <br />
                     <input type="text" id="question-secret" name="question-secret">
                     <br />

@@ -40,11 +40,13 @@ die('Erreur lors de la connexion à la base de données');
                 </p>
             </div>
             <div>
-                <img srcset="../ressources/illustration.jpg 720w,
-                ../ressources/illustrationMini.jpg 360"
-                sizes="(max-width: 650px) 360px,
-                        800px"
-                src="../ressources/illustration.jpg" alt="illustration de GBAF" /> -->
+                <img srcset="../ressources/illustration720.jpg 720w,
+                ../ressources/illustration320.jpg 320w,
+                ../ressources/illustration360.jpg 360"
+                sizes="(max-width: 320px) 300px,
+                    (max-width: 650px) 360px,
+                        1000px"
+                src="../ressources/illustration.jpg" alt="illustration de GBAF" />
             </div>
         </div>
         <!-- MAIN 1/2-->
