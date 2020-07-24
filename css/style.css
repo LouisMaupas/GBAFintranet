@@ -85,7 +85,7 @@ color: black;
 }
 
 
-/* UNIQUEMENT INDEX*/
+/* UNIQUEMENT HOME*/
 
 #index-main {
     display: flex;
@@ -95,7 +95,6 @@ color: black;
     padding-top: 3em;
     padding-bottom: 3em;
 }
-
 
 .forms {
     display: flex;
