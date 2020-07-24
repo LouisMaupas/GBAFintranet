@@ -3,8 +3,6 @@ if (!(isset($_SESSION['question']) && $_SESSION['question'] != ''))
 {
     header ("Location: login.php");
 }
-echo 'Session : ' . $_SESSION['username'] . " LE ID de l'user est "  . $_SESSION['id_user'] . "  L'ACTEUR EST " . $_GET['actoris'] . " LE VOTE EST  " . $_GET['vote'];
-
 //connexion à la BDD
 $bdd = new PDO('mysql:hostname=localhost;dbname=projettroisbdd','root','');
 
@@ -65,7 +63,7 @@ if(isset($_GET['vote'],$_GET['actoris']) AND !empty($_GET['vote']) AND !empty($_
                 $del->execute();
            }
         }
-       header('Location: ../html/actorDSA.php');
+       header('Location: ../html/login.php');
        } else {
            exit('erreur');
         }
