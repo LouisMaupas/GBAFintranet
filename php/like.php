@@ -4,7 +4,13 @@ if (!(isset($_SESSION['question']) && $_SESSION['question'] != ''))
     header ("Location: login.php");
 }
 //connexion à la BDD
-$bdd = new PDO('mysql:hostname=localhost;dbname=projettroisbdd','root','');
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
+}
+    catch (Exception $e)
+{
+        die('Erreur lors de la connexion à la base de données');
 
 //Recuperation du session id pour limiter le nombre de like par pers
 $sessionId = $_SESSION['id_user'];

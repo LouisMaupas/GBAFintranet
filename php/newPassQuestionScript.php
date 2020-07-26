@@ -5,7 +5,7 @@ try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
 }
-catch (Exception $e)
+    catch (Exception $e)
 {
         die('Erreur lors de la connexion à la base de données');
 }

@@ -5,7 +5,13 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 }
 
 //connexion à la BDD
-$objetPdo = new PDO('mysql:hostname=localhost;dbname=projettroisbdd','root','');
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
+}
+    catch (Exception $e)
+{
+        die('Erreur lors de la connexion à la base de données');
 // Ajout de commenaire - recuperation des données
 if(isset($_POST['post'],$_GET['actoris'])) {
     $post = $_POST['post'];
