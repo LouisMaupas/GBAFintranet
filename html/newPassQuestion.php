@@ -20,11 +20,11 @@ if ((isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
         <div id="index-main">
             <div class="forms form-login">
             <span class="title-one">
-                <?php echo "Bonjour " . $_SESSION['username'] ?>
+                <?php echo "Bonjour " . htmlspecialchars($_SESSION['username']) ?>
                 veuillez répondre à la question secrète afin de vérfier votre identité
             </span>
             <?php 
-            echo "La question est : " . $_SESSION['question'] ?>
+            echo "La question est : " . htmlspecialchars($_SESSION['question']) ?>
                 <form method="POST" action="../php/newPassQuestionScript.php" class="form">
                     <p class="title-two">
                         <label for="answer"></label>

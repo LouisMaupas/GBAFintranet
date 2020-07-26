@@ -8,7 +8,6 @@ catch (Exception $e)
 {
         die('Erreur lors de la connexion à la base de données');
 }
-echo $_SESSION['username'];
 
 //recuperation des infos associés à l'username
 $username = $_POST['username'];

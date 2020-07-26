@@ -17,7 +17,7 @@
                 </div>
                 <div id="user-name-text">  
                     <a href="profil.php">
-                        <?php echo $_SESSION['lname'] . " " . $_SESSION['fname'] ?>                   
+                        <?php echo htmlspecialchars($_SESSION['lname']) . " " . htmlspecialchars($_SESSION['fname']) ?>                   
                     </a>
                     <br/>
                     <a href="logout.php">
