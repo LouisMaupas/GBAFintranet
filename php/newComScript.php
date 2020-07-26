@@ -5,13 +5,7 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 }
 
 //connexion à la BDD
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
-}
-    catch (Exception $e)
-{
-        die('Erreur lors de la connexion à la base de données');
+    $objetPdo = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
 // Ajout de commenaire - recuperation des données
 if(isset($_POST['post'],$_GET['actoris'])) {
     $post = $_POST['post'];
@@ -46,5 +40,4 @@ if(isset($_POST['post'],$_GET['actoris'])) {
         }
          // Redirection du visiteur vers la page home
 header('Location: ../html/home.php');
-
 ?>

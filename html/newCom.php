@@ -3,15 +3,6 @@ if (!(isset($_SESSION['answer']) && $_SESSION['answer'] != ''))
 {
     header ("Location: login.php");
 }
-// Connexion à la BDD
-try
-{
-$bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
-}
-catch (Exception $e)
-{
-die('Erreur lors de la connexion à la base de données');
-}
 ?>
 
 <!DOCTYPE html>

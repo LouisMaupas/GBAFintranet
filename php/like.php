@@ -4,14 +4,7 @@ if (!(isset($_SESSION['question']) && $_SESSION['question'] != ''))
     header ("Location: login.php");
 }
 //connexion à la BDD
-try
-{
     $bdd = new PDO('mysql:host=localhost;dbname=projettroisbdd;charset=utf8', 'root', '');
-}
-    catch (Exception $e)
-{
-        die('Erreur lors de la connexion à la base de données');
-
 //Recuperation du session id pour limiter le nombre de like par pers
 $sessionId = $_SESSION['id_user'];
 
@@ -72,10 +65,4 @@ if(isset($_GET['vote'],$_GET['actoris']) AND !empty($_GET['vote']) AND !empty($_
        header('Location: ../html/login.php');
        } else {
            exit('erreur');
-        }
-       
-?>
-
-
-
-
+        };
