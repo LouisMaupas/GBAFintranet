@@ -164,8 +164,6 @@ color: black;
 }
 
 .home-actor-button {
-    text-overflow: ellipsis;
-    overflow: auto;
     display:block;
     text-align: center;
     background-color: #EFEFEF;
@@ -179,7 +177,11 @@ color: black;
     cursor: pointer;
     border-radius: 5px;
     padding-left: 1px;
-    block-size: 35px;
+}
+
+.home-actor-button a {
+    padding: 0.1em;
+    width: 60px;
 }
 
 /* UNIQUEMENT ACTOR */ 

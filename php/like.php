@@ -62,7 +62,7 @@ if(isset($_GET['vote'],$_GET['actoris']) AND !empty($_GET['vote']) AND !empty($_
                 $del->execute();
            }
         }
-       header('Location: ../html/login.php');
+       header('Location: ../html/login.php?');
        } else {
            exit('erreur');
         };

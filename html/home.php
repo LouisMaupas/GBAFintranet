@@ -66,53 +66,47 @@ die('Erreur lors de la connexion à la base de données');
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-formation-co.png" alt="logo F&CO"/>
                         <div class="home-actor-text">
-                            <h3>
+                            <p>
                                 Formation&co est une association française présente sur tout le territoire.<br/>
                                 Nous proposons à des personnes issues de tout milieu de devenir entrepreneur grâce à un crédit et un accompagnement professionnel et personnalisé.
-                            </h3>
-                            <a href="https://www.formationsco.com/">formationsco.com</a>
+                                <br/><a href="https://www.formationsco.com/">formationsco.com</a>
+                            </p>
+
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <div id="read-more">
-                            <a href="actorForm.php" target="blank" >
-                                Lire la suite
-                            </a>
-                        </div>
+                            <a href="actorForm.php" target="blank" >Lire la suite</a>
                     </div>
                 </div>
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-protect-people.png" alt="logo Protectpeople"/>
                         <div class="home-actor-text">
-                            <h3>
+                            <p>
                                 Protectpeople finance la solidarité nationale. <br/>
                                 Nous appliquons le principe édifié par la Sécurité sociale française en 1945 : permettre à chacun de bénéficier d’une protection sociale.
-                            </h3>
-                            <a href="https://www.un.org/en/sections/what-we-do/protect-human-rights/">Protectpeople.com</a>
+                                <br/><a href="https://www.un.org/en/sections/what-we-do/protect-human-rights/">Protectpeople.com</a>
+                            </p>
+
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorProtect.php" target="blank" >
-                            Lire la suite
-                        </a>
+                        <a href="actorProtect.php" target="blank">Lire la suite</a>
                     </div>
                 </div>
                 <div class="home-actor">
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-dsa-france.png" alt="logo DSAFrance"/>
                         <div class="home-actor-text">
-                            <h3>
+                            <p>
                                 Dsa France accélère la croissance du territoire et s’engage avec les collectivités territoriales. <br/>
                                 Nous accompagnons les entreprises dans les étapes clés de leur évolution.
-                            </h3>
-                            <a href="http://www.dsafrance.fr/">DSAFrance.fr</a>
+                                <br/><a href="http://www.dsafrance.fr/">DSAFrance.fr</a>
+                            </p>
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorDSA.php" target="blank">
-                            Lire la suite
-                        </a>
+                        <a href="actorDSA.php" target="blank">Lire la suite</a>
                     </div>
                 </div>
 
@@ -120,16 +114,15 @@ die('Erreur lors de la connexion à la base de données');
                     <div class="home-actor-logo-plus-text">
                         <img class="home-actor-logo" src="../ressources/logo-cde.png" alt="logo CDE"/>
                         <div class="home-actor-text">
-                            <h3>
+                            <p>
                                 La CDE (Chambre Des Entrepreneurs) accompagne les entreprises dans leurs démarches de formation. 
-                            </h3>
-                            <a href="https://www.cci.fr/web/auto-entrepreneur">CDE.fr</a>
+                                <br/><a href="https://www.cci.fr/web/auto-entrepreneur">CDE.fr</a>
+                            </p>
+
                         </div>   
                     </div>
                     <div class="home-actor-button ">
-                        <a href="actorCDE.php" target="blank" >
-                            Lire la suite
-                        </a>
+                        <a href="actorCDE.php" target="blank">Lire la suite</a>
                     </div>
                 </div> 
              </div>     
